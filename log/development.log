@@ -2234,3 +2234,902 @@ Processing by NoticiaController#edit as HTML
 Completed 200 OK in 118ms (Views: 114.3ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-03-10 12:10:53 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (6.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 154ms (Views: 147.0ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/noticia/3" for 127.0.0.1 at 2017-03-10 12:10:55 -0800
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mNoticium Load (0.6ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 107ms (Views: 104.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 12:10:56 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 127ms (Views: 125.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/noticia/admin" for 127.0.0.1 at 2017-03-10 12:20:39 -0800
+Processing by NoticiaController#admin as HTML
+  Rendering noticia/admin.html.erb within layouts/application
+  [1m[36mNoticium Load (1.2ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC[0m
+  Rendered noticia/admin.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 115ms (Views: 100.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/noticia/new" for 127.0.0.1 at 2017-03-10 12:20:40 -0800
+Processing by NoticiaController#new as HTML
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/_formulario_edit.html.erb (14.5ms)
+  Rendered noticia/new.html.erb within layouts/application (15.5ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <%= form_for :noticia, url: noticia_path do |f| %>
+    2: 
+    3:   <% if @noticia.errors.any? %>
+    4:     <p class="bg-warning">
+    5:       <%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:
+    6:       <ul>
+  
+app/views/noticia/_formulario_edit.html.erb:3:in `block in _app_views_noticia__formulario_edit_html_erb__220815426323093491_69959123648700'
+app/views/noticia/_formulario_edit.html.erb:1:in `_app_views_noticia__formulario_edit_html_erb__220815426323093491_69959123648700'
+app/views/noticia/new.html.erb:3:in `_app_views_noticia_new_html_erb___2634636166617142561_69959123794820'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.2ms)
+Started GET "/noticia/new" for 127.0.0.1 at 2017-03-10 12:21:44 -0800
+Processing by NoticiaController#new as HTML
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/_formulario_edit.html.erb (13.6ms)
+  Rendered noticia/new.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 132ms (Views: 107.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/noticia" for 127.0.0.1 at 2017-03-10 12:21:48 -0800
+Processing by NoticiaController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GHEgzEy/NXaK5vpVKocSTF2Y7FHAW7vGn1ckN80zWLga5dTL81qJoN8hEWD3ADuABTqIYsE14k3U8QabyikSeQ==", "noticia"=>{"titulo"=>"", "bajada"=>"", "cuerpo"=>""}, "commit"=>"Save Noticia"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering noticia/edit.html.erb within layouts/application
+  Rendered noticia/_formulario_edit.html.erb (7.0ms)
+  Rendered noticia/edit.html.erb within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    2: 
+    3:   <% if @noticia.errors.any? %>
+    4:     <p class="bg-warning">
+    5:       <%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:
+    6:       <ul>
+    7:         <% @noticia.errors.full_messages.each do |msg| %>
+    8:           <li><%= msg %></li>
+  
+app/views/noticia/_formulario_edit.html.erb:5:in `block in _app_views_noticia__formulario_edit_html_erb__220815426323093491_69959129234360'
+app/views/noticia/_formulario_edit.html.erb:1:in `_app_views_noticia__formulario_edit_html_erb__220815426323093491_69959129234360'
+app/views/noticia/edit.html.erb:5:in `_app_views_noticia_edit_html_erb__2936309944850248126_69959129261840'
+app/controllers/noticia_controller.rb:56:in `create'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.8ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (40.0ms)
+Started POST "/noticia" for 127.0.0.1 at 2017-03-10 12:21:58 -0800
+Processing by NoticiaController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GHEgzEy/NXaK5vpVKocSTF2Y7FHAW7vGn1ckN80zWLga5dTL81qJoN8hEWD3ADuABTqIYsE14k3U8QabyikSeQ==", "noticia"=>{"titulo"=>"", "bajada"=>"", "cuerpo"=>""}, "commit"=>"Save Noticia"}
+  [1m[35m (3.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering noticia/edit.html.erb within layouts/application
+  Rendered noticia/_formulario_edit.html.erb (3.0ms)
+  Rendered noticia/edit.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 99ms (Views: 82.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/noticia/new" for 127.0.0.1 at 2017-03-10 12:22:51 -0800
+Processing by NoticiaController#new as HTML
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/_formulario_edit.html.erb (1.9ms)
+  Rendered noticia/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 81ms (Views: 72.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/noticia" for 127.0.0.1 at 2017-03-10 12:22:53 -0800
+Processing by NoticiaController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cM5tazXjPVq8xcbDAIJVUzWy9Ke8Nss1Tp/7ayh6hy9yWplsigaBjOkCLfbdBXyfbRCQlL1Ykr4FOdnHL2DN7g==", "noticia"=>{"titulo"=>"", "bajada"=>"", "cuerpo"=>""}, "commit"=>"Save Noticia"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/_formulario_edit.html.erb (3.1ms)
+  Rendered noticia/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 204ms (Views: 201.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/noticia" for 127.0.0.1 at 2017-03-10 12:23:45 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.9ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 143ms (Views: 140.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/noticia/admin" for 127.0.0.1 at 2017-03-10 12:23:47 -0800
+Processing by NoticiaController#admin as HTML
+  Rendering noticia/admin.html.erb within layouts/application
+  [1m[36mNoticium Load (0.8ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC[0m
+  Rendered noticia/admin.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 110ms (Views: 108.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/noticia/new" for 127.0.0.1 at 2017-03-10 12:23:49 -0800
+Processing by NoticiaController#new as HTML
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/_formulario_edit.html.erb (2.0ms)
+  Rendered noticia/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 62ms (Views: 61.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/noticia" for 127.0.0.1 at 2017-03-10 12:23:50 -0800
+Processing by NoticiaController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"se49FgK1P1Md9cD2RbHEI72mBEwp6dZq5L/59d3SwyOzq6n9bLTQIcVfy/4AXolUeuOdd02mrLoknp7ZP8sQ6Q==", "noticia"=>{"titulo"=>"", "bajada"=>"", "cuerpo"=>""}, "commit"=>"Save Noticia"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/_formulario_edit.html.erb (4.3ms)
+  Rendered noticia/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 149ms (Views: 145.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/noticia" for 127.0.0.1 at 2017-03-10 12:24:34 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 1983ms (Views: 1981.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/noticia/admin" for 127.0.0.1 at 2017-03-10 12:24:38 -0800
+Processing by NoticiaController#admin as HTML
+  Rendering noticia/admin.html.erb within layouts/application
+  [1m[36mNoticium Load (1.2ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC[0m
+  Rendered noticia/admin.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 90ms (Views: 87.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/noticia/new" for 127.0.0.1 at 2017-03-10 12:24:44 -0800
+Processing by NoticiaController#new as HTML
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/_formulario_edit.html.erb (5.7ms)
+  Rendered noticia/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 1634ms (Views: 1633.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/noticia/new" for 127.0.0.1 at 2017-03-10 12:24:46 -0800
+Processing by NoticiaController#new as HTML
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/_formulario_edit.html.erb (6.2ms)
+  Rendered noticia/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 117ms (Views: 115.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/noticia" for 127.0.0.1 at 2017-03-10 12:24:47 -0800
+Processing by NoticiaController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zhm2WLe++dKZjYrTODhDedCAMeeos0G/fNiFSmSDrrtkjUJfCFtFBMxKYeblv2q1iCJV1KndGDQ3fqfmY5nkeg==", "noticia"=>{"titulo"=>"", "bajada"=>"", "cuerpo"=>""}, "commit"=>"Save Noticia"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/_formulario_edit.html.erb (1.3ms)
+  Rendered noticia/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 109ms (Views: 106.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/noticia" for 127.0.0.1 at 2017-03-10 12:26:45 -0800
+Processing by NoticiaController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yRL3+shPEBwMwgKRT8bfWgw9xPM/PBL9pZbeiOSobzjLhgP9d6qsylkF6aSSQfaWVJ+gwD5SS3buMPwk47Il+Q==", "noticia"=>{"titulo"=>"", "bajada"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at elit eget velit accumsan consequat. Nunc viverra neque magna, sit amet ultrices quam convallis ut. Vestibulum suscipit ut nulla nec rutrum. Sed ultrices dolor ac mattis faucibus. Praesent nibh lectus, sollicitudin at sollicitudin vel, mollis eget libero. Vestibulum mattis vitae augue non interdum. Donec eget magna semper, sodales quam ut, sollicitudin neque. Ut vitae posuere ipsum. Proin placerat eros vel mollis pellentesque. In eu leo eu turpis malesuada gravida sit amet sed lectus. Cras iaculis turpis felis, sit amet sagittis purus faucibus quis. Cras malesuada, erat sit amet congue consequat, massa est mollis ante, sit amet congue sapien magna non lectus. Etiam pretium, justo nec mattis viverra, massa nisi interdum turpis, non fringilla quam diam sit amet purus. ", "cuerpo"=>""}, "commit"=>"Save Noticia"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/_formulario_edit.html.erb (10.8ms)
+  Rendered noticia/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 117ms (Views: 107.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/noticia/admin" for 127.0.0.1 at 2017-03-10 12:29:28 -0800
+Processing by NoticiaController#admin as HTML
+  Rendering noticia/admin.html.erb within layouts/application
+  [1m[36mNoticium Load (0.5ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC[0m
+  Rendered noticia/admin.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 89ms (Views: 86.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 12:29:33 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (1.1ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 140ms (Views: 136.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/noticia/admin" for 127.0.0.1 at 2017-03-10 12:29:34 -0800
+Processing by NoticiaController#admin as HTML
+  Rendering noticia/admin.html.erb within layouts/application
+  [1m[36mNoticium Load (0.5ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC[0m
+  Rendered noticia/admin.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 63ms (Views: 61.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 12:29:39 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (1.2ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 105ms (Views: 101.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/noticia/admin" for 127.0.0.1 at 2017-03-10 12:29:44 -0800
+Processing by NoticiaController#admin as HTML
+  Rendering noticia/admin.html.erb within layouts/application
+  [1m[36mNoticium Load (4.1ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC[0m
+  Rendered noticia/admin.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 116ms (Views: 109.6ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/noticia/new" for 127.0.0.1 at 2017-03-10 12:29:46 -0800
+Processing by NoticiaController#new as HTML
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/_formulario_edit.html.erb (2.0ms)
+  Rendered noticia/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 104ms (Views: 103.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 12:29:55 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (2.1ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 157ms (Views: 153.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/noticia/admin" for 127.0.0.1 at 2017-03-10 12:30:05 -0800
+Processing by NoticiaController#admin as HTML
+  Rendering noticia/admin.html.erb within layouts/application
+  [1m[36mNoticium Load (0.6ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC[0m
+  Rendered noticia/admin.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 74ms (Views: 71.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/noticia/new" for 127.0.0.1 at 2017-03-10 12:30:07 -0800
+Processing by NoticiaController#new as HTML
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/_formulario_edit.html.erb (1.8ms)
+  Rendered noticia/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 90ms (Views: 89.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/noticia" for 127.0.0.1 at 2017-03-10 12:30:13 -0800
+Processing by NoticiaController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TCbKbzs7m8AyXmv6MC5c0Pr2xLqvuqTGJcU/w2Syf4lOY16EVTp0sur0YPJ1wRGnPbNdgcv13hbl5FjvhqusQw==", "noticia"=>{"titulo"=>"Nueva noticia", "bajada"=>"Hola", "cuerpo"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at elit eget velit accumsan consequat. Nunc viverra neque magna, sit amet ultrices quam convallis ut. Vestibulum suscipit ut nulla nec rutrum. Sed ultrices dolor ac mattis faucibus. Praesent nibh lectus, sollicitudin at sollicitudin vel, mollis eget libero. Vestibulum mattis vitae augue non interdum. Donec eget magna semper, sodales quam ut, sollicitudin neque. Ut vitae posuere ipsum. Proin placerat eros vel mollis pellentesque. In eu leo eu turpis malesuada gravida sit amet sed lectus. Cras iaculis turpis felis, sit amet sagittis purus faucibus quis. Cras malesuada, erat sit amet congue consequat, massa est mollis ante, sit amet congue sapien magna non lectus. Etiam pretium, justo nec mattis viverra, massa nisi interdum turpis, non fringilla quam diam sit amet purus. "}, "commit"=>"Save Noticia"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "noticia" ("titulo", "bajada", "cuerpo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["titulo", "Nueva noticia"], ["bajada", "Hola"], ["cuerpo", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at elit eget velit accumsan consequat. Nunc viverra neque magna, sit amet ultrices quam convallis ut. Vestibulum suscipit ut nulla nec rutrum. Sed ultrices dolor ac mattis faucibus. Praesent nibh lectus, sollicitudin at sollicitudin vel, mollis eget libero. Vestibulum mattis vitae augue non interdum. Donec eget magna semper, sodales quam ut, sollicitudin neque. Ut vitae posuere ipsum. Proin placerat eros vel mollis pellentesque. In eu leo eu turpis malesuada gravida sit amet sed lectus. Cras iaculis turpis felis, sit amet sagittis purus faucibus quis. Cras malesuada, erat sit amet congue consequat, massa est mollis ante, sit amet congue sapien magna non lectus. Etiam pretium, justo nec mattis viverra, massa nisi interdum turpis, non fringilla quam diam sit amet purus. "], ["created_at", 2017-03-10 20:30:13 UTC], ["updated_at", 2017-03-10 20:30:13 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/noticia/4
+Completed 302 Found in 5ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 12:30:13 -0800
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (2.6ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 95ms (Views: 87.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 12:30:16 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.7ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 109ms (Views: 107.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 12:30:29 -0800
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (2.2ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 113ms (Views: 107.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/noticia/admin" for 127.0.0.1 at 2017-03-10 12:30:31 -0800
+Processing by NoticiaController#admin as HTML
+  Rendering noticia/admin.html.erb within layouts/application
+  [1m[36mNoticium Load (0.4ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC[0m
+  Rendered noticia/admin.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 64ms (Views: 63.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/noticia/4/edit" for 127.0.0.1 at 2017-03-10 12:30:33 -0800
+Processing by NoticiaController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (0.6ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/edit.html.erb within layouts/application
+  Rendered noticia/_formulario_edit.html.erb (2.8ms)
+  Rendered noticia/edit.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 113ms (Views: 110.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/noticia" for 127.0.0.1 at 2017-03-10 12:30:37 -0800
+Processing by NoticiaController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m++dqGCsGOQu6wlxefuLVGEXUu88oVPYAQxTcsVOuP+ZqglDDq33lvZBAnk8FMYjplLL1FjuKQjBLTReJ1drNQ==", "noticia"=>{"titulo"=>"Nueva noticia", "bajada"=>"Hola", "cuerpo"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at elit eget velit accumsan consequat. Nunc viverra neque magna, sit amet ultrices quam convallis ut. Vestibulum suscipit ut nulla nec rutrum. Sed ultrices dolor ac mattis faucibus. Praesent nibh lectus, sollicitudin at sollicitudin vel, mollis eget libero. Vestibulum mattis vitae augue non interdum. Donec eget magna semper, sodales quam ut, sollicitudin neque. Ut vitae posuere ipsum. Proin placerat eros vel mollis pellentesque. In eu leo eu turpis malesuada gravida sit amet sed lectus. Cras iaculis turpis felis, sit amet sagittis purus faucibus quis. Cras malesuada, erat sit amet congue consequat, massa est mollis ante, sit amet congue sapien magna non lectus. Etiam pretium, justo nec mattis viverra, massa nisi interdum turpis, non fringilla quam diam sit amet purus.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at elit eget velit accumsan consequat. Nunc viverra neque magna, sit amet ultrices quam convallis ut. Vestibulum suscipit ut nulla nec rutrum. Sed ultrices dolor ac mattis faucibus. Praesent nibh lectus, sollicitudin at sollicitudin vel, mollis eget libero. Vestibulum mattis vitae augue non interdum. Donec eget magna semper, sodales quam ut, sollicitudin neque. Ut vitae posuere ipsum. Proin placerat eros vel mollis pellentesque. In eu leo eu turpis malesuada gravida sit amet sed lectus. Cras iaculis turpis felis, sit amet sagittis purus faucibus quis. Cras malesuada, erat sit amet congue consequat, massa est mollis ante, sit amet congue sapien magna non lectus. Etiam pretium, justo nec mattis viverra, massa nisi interdum turpis, non fringilla quam diam sit amet purus. "}, "commit"=>"Save Noticia"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "noticia" ("titulo", "bajada", "cuerpo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["titulo", "Nueva noticia"], ["bajada", "Hola"], ["cuerpo", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at elit eget velit accumsan consequat. Nunc viverra neque magna, sit amet ultrices quam convallis ut. Vestibulum suscipit ut nulla nec rutrum. Sed ultrices dolor ac mattis faucibus. Praesent nibh lectus, sollicitudin at sollicitudin vel, mollis eget libero. Vestibulum mattis vitae augue non interdum. Donec eget magna semper, sodales quam ut, sollicitudin neque. Ut vitae posuere ipsum. Proin placerat eros vel mollis pellentesque. In eu leo eu turpis malesuada gravida sit amet sed lectus. Cras iaculis turpis felis, sit amet sagittis purus faucibus quis. Cras malesuada, erat sit amet congue consequat, massa est mollis ante, sit amet congue sapien magna non lectus. Etiam pretium, justo nec mattis viverra, massa nisi interdum turpis, non fringilla quam diam sit amet purus.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at elit eget velit accumsan consequat. Nunc viverra neque magna, sit amet ultrices quam convallis ut. Vestibulum suscipit ut nulla nec rutrum. Sed ultrices dolor ac mattis faucibus. Praesent nibh lectus, sollicitudin at sollicitudin vel, mollis eget libero. Vestibulum mattis vitae augue non interdum. Donec eget magna semper, sodales quam ut, sollicitudin neque. Ut vitae posuere ipsum. Proin placerat eros vel mollis pellentesque. In eu leo eu turpis malesuada gravida sit amet sed lectus. Cras iaculis turpis felis, sit amet sagittis purus faucibus quis. Cras malesuada, erat sit amet congue consequat, massa est mollis ante, sit amet congue sapien magna non lectus. Etiam pretium, justo nec mattis viverra, massa nisi interdum turpis, non fringilla quam diam sit amet purus. "], ["created_at", 2017-03-10 20:30:37 UTC], ["updated_at", 2017-03-10 20:30:37 UTC]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/noticia/5
+Completed 302 Found in 13ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/noticia/5" for 127.0.0.1 at 2017-03-10 12:30:37 -0800
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mNoticium Load (0.5ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 132ms (Views: 129.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 12:30:43 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.6ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 69ms (Views: 66.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/noticia/admin" for 127.0.0.1 at 2017-03-10 12:32:03 -0800
+Processing by NoticiaController#admin as HTML
+  Rendering noticia/admin.html.erb within layouts/application
+  [1m[36mNoticium Load (2.7ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC[0m
+  Rendered noticia/admin.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 100ms (Views: 95.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/noticia/5/edit" for 127.0.0.1 at 2017-03-10 12:32:05 -0800
+Processing by NoticiaController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mNoticium Load (0.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering noticia/edit.html.erb within layouts/application
+  Rendered noticia/_formulario_edit.html.erb (1.5ms)
+  Rendered noticia/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 94ms (Views: 92.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/noticia" for 127.0.0.1 at 2017-03-10 12:32:07 -0800
+Processing by NoticiaController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WVXAT8cURqmTMitSiu8HIBVCZ2RwpawH16RfnEH1Ua5bEFSkqRWp20uYIFrPAEpX0gf+XxTq1tcXhTiwo+yCZA==", "noticia"=>{"titulo"=>"Nueva noticia", "bajada"=>"Hola", "cuerpo"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at elit eget velit accumsan consequat. Nunc viverra neque magna, sit amet ultrices quam convallis ut. Vestibulum suscipit ut nulla nec rutrum. Sed ultrices dolor ac mattis faucibus. Praesent nibh lectus, sollicitudin at sollicitudin vel, mollis eget libero. Vestibulum mattis vitae augue non interdum. Donec eget magna semper, sodales quam ut, sollicitudin neque. Ut vitae posuere ipsum. Proin placerat eros vel mollis pellentesque. In eu leo eu turpis malesuada gravida sit amet sed lectus. Cras iaculis turpis felis, sit amet sagittis purus faucibus quis. Cras malesuada, erat sit amet congue consequat, massa est mollis ante, sit amet congue sapien magna non lectus. Etiam pretium, justo nec mattis viverra, massa nisi interdum turpis, non fringilla quam diam sit amet purus.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at elit eget velit accumsan consequat. Nunc viverra neque magna, sit amet ultrices quam convallis ut. Vestibulum suscipit ut nulla nec rutrum. Sed ultrices dolor ac mattis faucibus. Praesent nibh lectus, sollicitudin at sollicitudin vel, mollis eget libero. Vestibulum mattis vitae augue non interdum. Donec eget magna semper, sodales quam ut, sollicitudin neque. Ut vitae posuere ipsum. Proin placerat eros vel mollis pellentesque. In eu leo eu turpis malesuada gravida sit amet sed lectus. Cras iaculis turpis felis, sit amet sagittis purus faucibus quis. Cras malesuada, erat sit amet congue consequat, massa est mollis ante, sit amet congue sapien magna non lectus. Etiam pretium, justo nec mattis viverra, massa nisi interdum turpis, non fringilla quam diam sit amet purus. "}, "commit"=>"Save Noticia"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "noticia" ("titulo", "bajada", "cuerpo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["titulo", "Nueva noticia"], ["bajada", "Hola"], ["cuerpo", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at elit eget velit accumsan consequat. Nunc viverra neque magna, sit amet ultrices quam convallis ut. Vestibulum suscipit ut nulla nec rutrum. Sed ultrices dolor ac mattis faucibus. Praesent nibh lectus, sollicitudin at sollicitudin vel, mollis eget libero. Vestibulum mattis vitae augue non interdum. Donec eget magna semper, sodales quam ut, sollicitudin neque. Ut vitae posuere ipsum. Proin placerat eros vel mollis pellentesque. In eu leo eu turpis malesuada gravida sit amet sed lectus. Cras iaculis turpis felis, sit amet sagittis purus faucibus quis. Cras malesuada, erat sit amet congue consequat, massa est mollis ante, sit amet congue sapien magna non lectus. Etiam pretium, justo nec mattis viverra, massa nisi interdum turpis, non fringilla quam diam sit amet purus.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at elit eget velit accumsan consequat. Nunc viverra neque magna, sit amet ultrices quam convallis ut. Vestibulum suscipit ut nulla nec rutrum. Sed ultrices dolor ac mattis faucibus. Praesent nibh lectus, sollicitudin at sollicitudin vel, mollis eget libero. Vestibulum mattis vitae augue non interdum. Donec eget magna semper, sodales quam ut, sollicitudin neque. Ut vitae posuere ipsum. Proin placerat eros vel mollis pellentesque. In eu leo eu turpis malesuada gravida sit amet sed lectus. Cras iaculis turpis felis, sit amet sagittis purus faucibus quis. Cras malesuada, erat sit amet congue consequat, massa est mollis ante, sit amet congue sapien magna non lectus. Etiam pretium, justo nec mattis viverra, massa nisi interdum turpis, non fringilla quam diam sit amet purus. "], ["created_at", 2017-03-10 20:32:07 UTC], ["updated_at", 2017-03-10 20:32:07 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/noticia/6
+Completed 302 Found in 5ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/noticia/6" for 127.0.0.1 at 2017-03-10 12:32:07 -0800
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mNoticium Load (0.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 84ms (Views: 81.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/noticia/admin" for 127.0.0.1 at 2017-03-10 12:32:09 -0800
+Processing by NoticiaController#admin as HTML
+  Rendering noticia/admin.html.erb within layouts/application
+  [1m[36mNoticium Load (1.0ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC[0m
+  Rendered noticia/admin.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 86ms (Views: 82.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/noticia/6/edit" for 127.0.0.1 at 2017-03-10 12:32:32 -0800
+Processing by NoticiaController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mNoticium Load (0.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering noticia/edit.html.erb within layouts/application
+  Rendered noticia/_formulario_edit.html.erb (3.0ms)
+  Rendered noticia/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 130ms (Views: 126.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/noticia/6/edit" for 127.0.0.1 at 2017-03-10 12:33:08 -0800
+Processing by NoticiaController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mNoticium Load (0.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering noticia/edit.html.erb within layouts/application
+  Rendered noticia/_formulario_edit.html.erb (1.8ms)
+  Rendered noticia/edit.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 108ms (Views: 106.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/noticia.6" for 127.0.0.1 at 2017-03-10 12:33:09 -0800
+Processing by NoticiaController#create as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jvszmyLMVEjfNHYjKDrSNsYY0NZXbamU5r8OBszs5TiMb8ecnSnonorznRb1vfv6nrq05VYD8B+tGSyqy/av+Q==", "noticia"=>{"titulo"=>"Nueva noticia", "bajada"=>"Hola", "cuerpo"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at elit eget velit accumsan consequat. Nunc viverra neque magna, sit amet ultrices quam convallis ut. Vestibulum suscipit ut nulla nec rutrum. Sed ultrices dolor ac mattis faucibus. Praesent nibh lectus, sollicitudin at sollicitudin vel, mollis eget libero. Vestibulum mattis vitae augue non interdum. Donec eget magna semper, sodales quam ut, sollicitudin neque. Ut vitae posuere ipsum. Proin placerat eros vel mollis pellentesque. In eu leo eu turpis malesuada gravida sit amet sed lectus. Cras iaculis turpis felis, sit amet sagittis purus faucibus quis. Cras malesuada, erat sit amet congue consequat, massa est mollis ante, sit amet congue sapien magna non lectus. Etiam pretium, justo nec mattis viverra, massa nisi interdum turpis, non fringilla quam diam sit amet purus.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at elit eget velit accumsan consequat. Nunc viverra neque magna, sit amet ultrices quam convallis ut. Vestibulum suscipit ut nulla nec rutrum. Sed ultrices dolor ac mattis faucibus. Praesent nibh lectus, sollicitudin at sollicitudin vel, mollis eget libero. Vestibulum mattis vitae augue non interdum. Donec eget magna semper, sodales quam ut, sollicitudin neque. Ut vitae posuere ipsum. Proin placerat eros vel mollis pellentesque. In eu leo eu turpis malesuada gravida sit amet sed lectus. Cras iaculis turpis felis, sit amet sagittis purus faucibus quis. Cras malesuada, erat sit amet congue consequat, massa est mollis ante, sit amet congue sapien magna non lectus. Etiam pretium, justo nec mattis viverra, massa nisi interdum turpis, non fringilla quam diam sit amet purus. "}, "commit"=>"Save Noticia"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "noticia" ("titulo", "bajada", "cuerpo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["titulo", "Nueva noticia"], ["bajada", "Hola"], ["cuerpo", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at elit eget velit accumsan consequat. Nunc viverra neque magna, sit amet ultrices quam convallis ut. Vestibulum suscipit ut nulla nec rutrum. Sed ultrices dolor ac mattis faucibus. Praesent nibh lectus, sollicitudin at sollicitudin vel, mollis eget libero. Vestibulum mattis vitae augue non interdum. Donec eget magna semper, sodales quam ut, sollicitudin neque. Ut vitae posuere ipsum. Proin placerat eros vel mollis pellentesque. In eu leo eu turpis malesuada gravida sit amet sed lectus. Cras iaculis turpis felis, sit amet sagittis purus faucibus quis. Cras malesuada, erat sit amet congue consequat, massa est mollis ante, sit amet congue sapien magna non lectus. Etiam pretium, justo nec mattis viverra, massa nisi interdum turpis, non fringilla quam diam sit amet purus.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at elit eget velit accumsan consequat. Nunc viverra neque magna, sit amet ultrices quam convallis ut. Vestibulum suscipit ut nulla nec rutrum. Sed ultrices dolor ac mattis faucibus. Praesent nibh lectus, sollicitudin at sollicitudin vel, mollis eget libero. Vestibulum mattis vitae augue non interdum. Donec eget magna semper, sodales quam ut, sollicitudin neque. Ut vitae posuere ipsum. Proin placerat eros vel mollis pellentesque. In eu leo eu turpis malesuada gravida sit amet sed lectus. Cras iaculis turpis felis, sit amet sagittis purus faucibus quis. Cras malesuada, erat sit amet congue consequat, massa est mollis ante, sit amet congue sapien magna non lectus. Etiam pretium, justo nec mattis viverra, massa nisi interdum turpis, non fringilla quam diam sit amet purus. "], ["created_at", 2017-03-10 20:33:09 UTC], ["updated_at", 2017-03-10 20:33:09 UTC]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/noticia/7
+Completed 302 Found in 6ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/noticia/7" for 127.0.0.1 at 2017-03-10 12:33:09 -0800
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mNoticium Load (2.0ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 98ms (Views: 87.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 12:33:13 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.5ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 73ms (Views: 71.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/noticia/admin" for 127.0.0.1 at 2017-03-10 12:33:15 -0800
+Processing by NoticiaController#admin as HTML
+  Rendering noticia/admin.html.erb within layouts/application
+  [1m[36mNoticium Load (1.1ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC[0m
+  Rendered noticia/admin.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 47ms (Views: 44.3ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/noticia/7" for 127.0.0.1 at 2017-03-10 12:33:17 -0800
+Processing by NoticiaController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UcDlgCMic0DmPyo3Yeicd8wj7lidmnyhhq6gIxvsSeNTVBGHnMfPlrP4wQK8b7W7lIGKa5z0JSrNCIKPHPYDIg==", "id"=>"7"}
+  [1m[36mNoticium Load (0.6ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "noticia" WHERE "noticia"."id" = $1[0m  [["id", 7]]
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/noticia/admin
+Completed 302 Found in 22ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/noticia/admin" for 127.0.0.1 at 2017-03-10 12:33:17 -0800
+Processing by NoticiaController#admin as HTML
+  Rendering noticia/admin.html.erb within layouts/application
+  [1m[36mNoticium Load (3.5ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC[0m
+  Rendered noticia/admin.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 124ms (Views: 118.1ms | ActiveRecord: 3.5ms)
+
+
+Started DELETE "/noticia/6" for 127.0.0.1 at 2017-03-10 12:33:19 -0800
+Processing by NoticiaController#destroy as HTML
+  Parameters: {"authenticity_token"=>"l/XxstExqUo1Ez2DAV9aUHi0LQbJF6jFhI4fIRi9lIiVYQW1btQVnGDU1rbc2HOcIBZJNch58U7PKD2NH6feSQ==", "id"=>"6"}
+  [1m[36mNoticium Load (3.6ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[31mDELETE FROM "noticia" WHERE "noticia"."id" = $1[0m  [["id", 6]]
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/noticia/admin
+Completed 302 Found in 16ms (ActiveRecord: 9.7ms)
+
+
+Started GET "/noticia/admin" for 127.0.0.1 at 2017-03-10 12:33:19 -0800
+Processing by NoticiaController#admin as HTML
+  Rendering noticia/admin.html.erb within layouts/application
+  [1m[36mNoticium Load (5.5ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC[0m
+  Rendered noticia/admin.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 152ms (Views: 144.9ms | ActiveRecord: 5.5ms)
+
+
+Started DELETE "/noticia/5" for 127.0.0.1 at 2017-03-10 12:33:21 -0800
+Processing by NoticiaController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XA1sZNjD8o3l3NbU16zL0CtaW5xTwbLKg8ElkNMajclemZhjZyZOW7AbPeEKK+Icc/g/r1Kv60HIZwc81ADHCA==", "id"=>"5"}
+  [1m[36mNoticium Load (0.8ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "noticia" WHERE "noticia"."id" = $1[0m  [["id", 5]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/noticia/admin
+Completed 302 Found in 19ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/noticia/admin" for 127.0.0.1 at 2017-03-10 12:33:21 -0800
+Processing by NoticiaController#admin as HTML
+  Rendering noticia/admin.html.erb within layouts/application
+  [1m[36mNoticium Load (1.3ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC[0m
+  Rendered noticia/admin.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 133ms (Views: 130.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/noticia/4/edit" for 127.0.0.1 at 2017-03-10 12:33:23 -0800
+Processing by NoticiaController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (3.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/edit.html.erb within layouts/application
+  Rendered noticia/_formulario_edit.html.erb (2.4ms)
+  Rendered noticia/edit.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 89ms (Views: 81.3ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/noticia.4" for 127.0.0.1 at 2017-03-10 12:33:24 -0800
+Processing by NoticiaController#create as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xB6EQhRmwk6ZhVkHgyu+1V1u9jc5Q4sWtLnGfaRMjRUuVqTcQQvAfrbkhelL5h2R5xxOm6qylATcqxk5ndcxAg==", "noticia"=>{"titulo"=>"Nueva noticia", "bajada"=>"Hola", "cuerpo"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at elit eget velit accumsan consequat. Nunc viverra neque magna, sit amet ultrices quam convallis ut. Vestibulum suscipit ut nulla nec rutrum. Sed ultrices dolor ac mattis faucibus. Praesent nibh lectus, sollicitudin at sollicitudin vel, mollis eget libero. Vestibulum mattis vitae augue non interdum. Donec eget magna semper, sodales quam ut, sollicitudin neque. Ut vitae posuere ipsum. Proin placerat eros vel mollis pellentesque. In eu leo eu turpis malesuada gravida sit amet sed lectus. Cras iaculis turpis felis, sit amet sagittis purus faucibus quis. Cras malesuada, erat sit amet congue consequat, massa est mollis ante, sit amet congue sapien magna non lectus. Etiam pretium, justo nec mattis viverra, massa nisi interdum turpis, non fringilla quam diam sit amet purus. "}, "commit"=>"Save Noticia"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "noticia" ("titulo", "bajada", "cuerpo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["titulo", "Nueva noticia"], ["bajada", "Hola"], ["cuerpo", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at elit eget velit accumsan consequat. Nunc viverra neque magna, sit amet ultrices quam convallis ut. Vestibulum suscipit ut nulla nec rutrum. Sed ultrices dolor ac mattis faucibus. Praesent nibh lectus, sollicitudin at sollicitudin vel, mollis eget libero. Vestibulum mattis vitae augue non interdum. Donec eget magna semper, sodales quam ut, sollicitudin neque. Ut vitae posuere ipsum. Proin placerat eros vel mollis pellentesque. In eu leo eu turpis malesuada gravida sit amet sed lectus. Cras iaculis turpis felis, sit amet sagittis purus faucibus quis. Cras malesuada, erat sit amet congue consequat, massa est mollis ante, sit amet congue sapien magna non lectus. Etiam pretium, justo nec mattis viverra, massa nisi interdum turpis, non fringilla quam diam sit amet purus. "], ["created_at", 2017-03-10 20:33:24 UTC], ["updated_at", 2017-03-10 20:33:24 UTC]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/noticia/8
+Completed 302 Found in 6ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/noticia/8" for 127.0.0.1 at 2017-03-10 12:33:24 -0800
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mNoticium Load (5.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 92ms (Views: 78.3ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/noticia/8" for 127.0.0.1 at 2017-03-10 12:36:09 -0800
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mNoticium Load (0.6ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 73ms (Views: 69.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 12:36:11 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.6ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 122ms (Views: 119.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 12:36:12 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.9ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 61ms (Views: 59.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/noticia/admin" for 127.0.0.1 at 2017-03-10 12:36:13 -0800
+Processing by NoticiaController#admin as HTML
+  Rendering noticia/admin.html.erb within layouts/application
+  [1m[36mNoticium Load (0.5ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC[0m
+  Rendered noticia/admin.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 77ms (Views: 75.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/noticia/8/edit" for 127.0.0.1 at 2017-03-10 12:36:14 -0800
+Processing by NoticiaController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mNoticium Load (0.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering noticia/edit.html.erb within layouts/application
+  Rendered noticia/_formulario_edit.html.erb (9.8ms)
+  Rendered noticia/edit.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 128ms (Views: 125.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/noticia/8/edit" for 127.0.0.1 at 2017-03-10 12:36:15 -0800
+  
+ActionController::RoutingError (No route matches [POST] "/noticia/8/edit"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [10 times] (13.8ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.0ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (60.9ms)
+Started GET "/noticia/8/edit" for 127.0.0.1 at 2017-03-10 12:37:07 -0800
+Processing by NoticiaController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mNoticium Load (0.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering noticia/edit.html.erb within layouts/application
+  Rendered noticia/_formulario_edit.html.erb (2.1ms)
+  Rendered noticia/edit.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 90ms (Views: 88.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/noticia/8" for 127.0.0.1 at 2017-03-10 12:37:08 -0800
+Processing by NoticiaController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1WKvRE1XPKtDXsT7/y36ZQUB+SZBFxxCCN1Znr/YiM/X9ltD8rKAfRaZL84iqtOpXaOdFUB5RclDe3syuMLCDg==", "noticium"=>{"titulo"=>"Nueva noticia", "bajada"=>"Hola", "cuerpo"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at elit eget velit accumsan consequat. Nunc viverra neque magna, sit amet ultrices quam convallis ut. Vestibulum suscipit ut nulla nec rutrum. Sed ultrices dolor ac mattis faucibus. Praesent nibh lectus, sollicitudin at sollicitudin vel, mollis eget libero. Vestibulum mattis vitae augue non interdum. Donec eget magna semper, sodales quam ut, sollicitudin neque. Ut vitae posuere ipsum. Proin placerat eros vel mollis pellentesque. In eu leo eu turpis malesuada gravida sit amet sed lectus. Cras iaculis turpis felis, sit amet sagittis purus faucibus quis. Cras malesuada, erat sit amet congue consequat, massa est mollis ante, sit amet congue sapien magna non lectus. Etiam pretium, justo nec mattis viverra, massa nisi interdum turpis, non fringilla quam diam sit amet purus. "}, "commit"=>"Update Noticium", "id"=>"8"}
+  [1m[36mNoticium Load (0.3ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: noticia):
+  
+app/controllers/noticia_controller.rb:63:in `noticia_params'
+app/controllers/noticia_controller.rb:33:in `update'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.1ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.9ms)
+Started PATCH "/noticia/8" for 127.0.0.1 at 2017-03-10 12:40:26 -0800
+Processing by NoticiaController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1WKvRE1XPKtDXsT7/y36ZQUB+SZBFxxCCN1Znr/YiM/X9ltD8rKAfRaZL84iqtOpXaOdFUB5RclDe3syuMLCDg==", "noticium"=>{"titulo"=>"Nueva noticia", "bajada"=>"Hola", "cuerpo"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at elit eget velit accumsan consequat. Nunc viverra neque magna, sit amet ultrices quam convallis ut. Vestibulum suscipit ut nulla nec rutrum. Sed ultrices dolor ac mattis faucibus. Praesent nibh lectus, sollicitudin at sollicitudin vel, mollis eget libero. Vestibulum mattis vitae augue non interdum. Donec eget magna semper, sodales quam ut, sollicitudin neque. Ut vitae posuere ipsum. Proin placerat eros vel mollis pellentesque. In eu leo eu turpis malesuada gravida sit amet sed lectus. Cras iaculis turpis felis, sit amet sagittis purus faucibus quis. Cras malesuada, erat sit amet congue consequat, massa est mollis ante, sit amet congue sapien magna non lectus. Etiam pretium, justo nec mattis viverra, massa nisi interdum turpis, non fringilla quam diam sit amet purus. "}, "commit"=>"Update Noticium", "id"=>"8"}
+  [1m[36mNoticium Load (0.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/noticia/8
+Completed 302 Found in 55ms (ActiveRecord: 10.9ms)
+
+
+Started GET "/noticia/8" for 127.0.0.1 at 2017-03-10 12:40:26 -0800
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mNoticium Load (0.3ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 94ms (Views: 87.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/noticia/admin" for 127.0.0.1 at 2017-03-10 12:40:28 -0800
+Processing by NoticiaController#admin as HTML
+  Rendering noticia/admin.html.erb within layouts/application
+  [1m[36mNoticium Load (0.4ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC[0m
+  Rendered noticia/admin.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 75ms (Views: 73.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/noticia/8/edit" for 127.0.0.1 at 2017-03-10 12:40:30 -0800
+Processing by NoticiaController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mNoticium Load (0.3ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering noticia/edit.html.erb within layouts/application
+  Rendered noticia/_formulario_edit.html.erb (1.7ms)
+  Rendered noticia/edit.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 71ms (Views: 69.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/noticia/8" for 127.0.0.1 at 2017-03-10 12:40:36 -0800
+Processing by NoticiaController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n9u1KDByqhr0yd4C0mIwP8qO+8OYEAmiFbYgX6oEH0KlOI5Mj3CIBCp1n82cWRtTRhVwxmFAxTJL4Qc2X4tI0w==", "noticium"=>{"titulo"=>"Nueva noticia 3", "bajada"=>" chasHola", "cuerpo"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at elit eget velit accumsan consequat. Nunc viverra neque magna, sit amet ultrices quam convallis ut. Vestibulum suscipit ut nulla nec rutrum. Sed ultrices dolor ac mattis faucibus. Praesent nibh lectus, sollicitudin at sollicitudin vel, mollis eget libero. Vestibulum mattis vitae augue non interdum. Donec eget magna semper, sodales quam ut, sollicitudin neque. Ut vitae posuere ipsum. Proin placerat eros vel mollis pellentesque. In eu leo eu turpis malesuada gravida sit amet sed lectus. Cras iaculis turpis felis, sit amet sagittis purus faucibus quis. Cras malesuada, erat sit amet congue consequat, massa est mollis ante, sit amet congue sapien magna non lectus. Etiam pretium, justo nec mattis viverra, massa nisi interdum turpis, non fringilla quam diam sit amet purus. "}, "commit"=>"Update Noticium", "id"=>"8"}
+  [1m[36mNoticium Load (0.8ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (3.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "noticia" SET "titulo" = $1, "bajada" = $2, "updated_at" = $3 WHERE "noticia"."id" = $4[0m  [["titulo", "Nueva noticia 3"], ["bajada", " chasHola"], ["updated_at", 2017-03-10 20:40:36 UTC], ["id", 8]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/noticia/8
+Completed 302 Found in 19ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/noticia/8" for 127.0.0.1 at 2017-03-10 12:40:36 -0800
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mNoticium Load (0.6ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 94ms (Views: 91.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/noticia/admin" for 127.0.0.1 at 2017-03-10 12:40:38 -0800
+Processing by NoticiaController#admin as HTML
+  Rendering noticia/admin.html.erb within layouts/application
+  [1m[36mNoticium Load (2.1ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC[0m
+  Rendered noticia/admin.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 110ms (Views: 105.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 12:40:39 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (2.1ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 95ms (Views: 91.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 12:41:50 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (1.3ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 1973ms (Views: 1970.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 12:42:17 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.9ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 66ms (Views: 62.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 12:42:29 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.9ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 1711ms (Views: 1709.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 12:42:39 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 1611ms (Views: 1609.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 12:43:09 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (1.2ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 1697ms (Views: 1695.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 12:43:32 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (1.0ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 2142ms (Views: 2139.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 12:43:37 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.6ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 53ms (Views: 52.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 12:44:18 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (1.9ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 70ms (Views: 67.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/noticia/3" for 127.0.0.1 at 2017-03-10 12:44:22 -0800
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mNoticium Load (0.3ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 155ms (Views: 153.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 12:44:23 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.8ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 100ms (Views: 98.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/noticia/admin" for 127.0.0.1 at 2017-03-10 12:44:24 -0800
+Processing by NoticiaController#admin as HTML
+  Rendering noticia/admin.html.erb within layouts/application
+  [1m[36mNoticium Load (5.5ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC[0m
+  Rendered noticia/admin.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 94ms (Views: 87.4ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 12:44:25 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 69ms (Views: 67.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 12:44:25 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.5ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 66ms (Views: 64.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 12:44:28 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 77ms (Views: 75.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/noticia/admin" for 127.0.0.1 at 2017-03-10 12:44:29 -0800
+Processing by NoticiaController#admin as HTML
+  Rendering noticia/admin.html.erb within layouts/application
+  [1m[36mNoticium Load (0.5ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC[0m
+  Rendered noticia/admin.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 101ms (Views: 99.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 12:44:29 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 106ms (Views: 105.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/noticia/8" for 127.0.0.1 at 2017-03-10 12:44:30 -0800
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mNoticium Load (0.3ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 93ms (Views: 90.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/noticia/8" for 127.0.0.1 at 2017-03-10 12:44:55 -0800
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mNoticium Load (0.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 90ms (Views: 88.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 12:44:59 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 86ms (Views: 84.1ms | ActiveRecord: 0.4ms)
+
+

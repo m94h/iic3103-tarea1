@@ -19,6 +19,7 @@ end
 
 def new
   @current_modulo = 'administrador'
+  @noticia = Noticium.new
 end
 
 def edit
@@ -52,14 +53,14 @@ def create
   if @noticia.save
     redirect_to @noticia
   else
-    render 'edit'
+    render 'new'
   end
 
 end
 
 private
   def noticia_params
-    params.require(:noticia).permit(:titulo, :bajada, :cuerpo)
+    params.require(:noticium).permit(:titulo, :bajada, :cuerpo)
   end
 
 end

@@ -1,4 +1,14 @@
-<%= form_for :noticia, url: noticia_path do |f| %>
+<%= form_for @noticia do |f| %>
+
+  <% if @noticia.errors.any? %>
+    <p class="bg-danger">
+      Hay <%= pluralize(@noticia.errors.count, "error") %> error(es) que debe corregir:
+      <% @noticia.errors.full_messages.each do |msg| %>
+        <span style="display:block">- <%= msg %></span>
+      <% end %>
+    </p>
+  <% end %>
+
   <div class="form-group">
     <%= f.label :titulo %>
     <%= f.text_field :titulo, :class => 'form-control' %>
