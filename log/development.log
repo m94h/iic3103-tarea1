@@ -6,3 +6,1237 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 27ms (Views: 13.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-03-09 16:28:21 -0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 732ms (Views: 725.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/noticia/new" for 127.0.0.1 at 2017-03-09 16:35:00 -0800
+Processing by NoticiaController#new as HTML
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/new.html.erb within layouts/application (52.7ms)
+Completed 200 OK in 169ms (Views: 167.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/noticia/new" for 127.0.0.1 at 2017-03-09 16:37:28 -0800
+  
+ActionController::RoutingError (No route matches [POST] "/noticia/new"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered collection of /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [10 times] (9.7ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.5ms)
+Started GET "/noticia/new" for 127.0.0.1 at 2017-03-09 16:37:40 -0800
+Processing by NoticiaController#new as HTML
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/mihurtado/Git/iic3103-tarea1/app/views/noticia/new.html.erb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+end=  form_for :noticia, url :noticia_path do |f| @output_bu
+                              ^
+/home/mihurtado/Git/iic3103-tarea1/app/views/noticia/new.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/noticia/new.html.erb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/views/noticia/new.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.5ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (38.6ms)
+Started GET "/noticia/new" for 127.0.0.1 at 2017-03-09 16:38:05 -0800
+Processing by NoticiaController#new as HTML
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/noticia" for 127.0.0.1 at 2017-03-09 16:38:09 -0800
+Processing by NoticiaController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZJm9P9qaTkCFfo3lIn3xy+SsKc/udIrFUcVhP8HOqsWKOnxN/X54SJMH3Irmwa0Bfq7lZKfPp06MNRDQj5xmwg==", "noticia"=>{"titulo"=>"asdasd", "bajada"=>"12", "cuerpo"=>"45"}, "commit"=>"Save Noticia"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3863481123285700140);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateNoticia (20170310003955)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.9ms)[0m  [1m[35mCREATE TABLE "noticia" ("id" serial primary key, "titulo" character varying, "bajada" text, "cuerpo" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170310003955"]]
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(3863481123285700140)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/noticia/new" for 127.0.0.1 at 2017-03-09 16:56:56 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by NoticiaController#new as HTML
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/noticia" for 127.0.0.1 at 2017-03-09 16:56:59 -0800
+Processing by NoticiaController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2K2ZKKitZA3wCYUEguKlt1Mr9RzEGl6W6BV5yL2mvJ02Dlhaj0lSBeZw1GtGXvl9ySk5t42hcx015Qgn8/Rwmg==", "noticia"=>{"titulo"=>"", "bajada"=>"", "cuerpo"=>""}, "commit"=>"Save Noticia"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant NoticiaController::Noticia):
+  
+app/controllers/noticia_controller.rb:9:in `create'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.4ms)
+Started GET "/noticia" for 127.0.0.1 at 2017-03-09 16:59:59 -0800
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for NoticiaController):
+  
+actionpack (5.0.2) lib/abstract_controller/base.rb:121:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.8ms)
+Started GET "/noticia/new" for 127.0.0.1 at 2017-03-09 17:00:03 -0800
+Processing by NoticiaController#new as HTML
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 43ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/noticia" for 127.0.0.1 at 2017-03-09 17:00:09 -0800
+Processing by NoticiaController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NryQkrFtal6mGQkCW/1kgCQy6Bpi2L00gT8hTxusP/LYH1HglolcVrBgWG2fQThKvjAksStjkL9cz1CgVf7z9Q==", "noticia"=>{"titulo"=>"asd", "bajada"=>"asd", "cuerpo"=>"asd"}, "commit"=>"Save Noticia"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant NoticiaController::Noticia):
+  
+app/controllers/noticia_controller.rb:9:in `create'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.7ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.0ms)
+Started POST "/noticia" for 127.0.0.1 at 2017-03-09 17:02:02 -0800
+Processing by NoticiaController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NryQkrFtal6mGQkCW/1kgCQy6Bpi2L00gT8hTxusP/LYH1HglolcVrBgWG2fQThKvjAksStjkL9cz1CgVf7z9Q==", "noticia"=>{"titulo"=>"asd", "bajada"=>"asd", "cuerpo"=>"asd"}, "commit"=>"Save Noticia"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "noticia" ("titulo", "bajada", "cuerpo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["titulo", "asd"], ["bajada", "asd"], ["cuerpo", "asd"], ["created_at", 2017-03-10 01:02:02 UTC], ["updated_at", 2017-03-10 01:02:02 UTC]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/noticia/1
+Completed 302 Found in 67ms (ActiveRecord: 14.2ms)
+
+
+Started GET "/noticia/1" for 127.0.0.1 at 2017-03-09 17:02:02 -0800
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for NoticiaController):
+  
+actionpack (5.0.2) lib/abstract_controller/base.rb:121:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
+Started GET "/noticia/1" for 127.0.0.1 at 2017-03-09 17:06:26 -0800
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNoticium Load (3.7ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (56.3ms)
+Completed 500 Internal Server Error in 108ms (ActiveRecord: 4.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `s' for #<#<Class:0x007f3b01f483d0>:0x007f3b024cec00>):
+    1: <h1><%= @noticia.titulo %></h1>
+    2: <p><%= @noticia.bajada %></p>
+    3: <hr>
+    4: <p><%s @noticia.cuerpo %></p>
+  
+app/views/noticia/show.html.erb:4:in `_app_views_noticia_show_html_erb___4216867545335485408_69945706301200'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.9ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.4ms)
+Started GET "/noticia/1" for 127.0.0.1 at 2017-03-09 17:06:37 -0800
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNoticium Load (4.3ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 51ms (Views: 43.3ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/noticia/1" for 127.0.0.1 at 2017-03-09 17:16:54 -0800
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNoticium Load (1.3ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/config
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/images
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/javascripts
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/stylesheets
+  /home/mihurtado/Git/iic3103-tarea1/vendor/assets/javascripts
+  /home/mihurtado/Git/iic3103-tarea1/vendor/assets/stylesheets
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/jquery-rails-4.2.2/vendor/assets/javascripts
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actioncable-5.0.2/lib/assets/compiled
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
+    4:     <title>Noticiasapp</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.css.sass:18
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__3260235412160520667_69945709292460'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.2ms)
+Started GET "/noticia/new" for 127.0.0.1 at 2017-03-09 17:18:27 -0800
+Processing by NoticiaController#new as HTML
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/new.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/config
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/images
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/javascripts
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/stylesheets
+  /home/mihurtado/Git/iic3103-tarea1/vendor/assets/javascripts
+  /home/mihurtado/Git/iic3103-tarea1/vendor/assets/stylesheets
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/jquery-rails-4.2.2/vendor/assets/javascripts
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actioncable-5.0.2/lib/assets/compiled
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
+    4:     <title>Noticiasapp</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.css.sass:18
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__3260235412160520667_69945622873080'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.6ms)
+Started GET "/noticia/new" for 127.0.0.1 at 2017-03-09 17:20:09 -0800
+Processing by NoticiaController#new as HTML
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid @import: expected end of line, was ";".):
+    4:     <title>Noticiasapp</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.css.sass:18
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__3260235412160520667_69945723552200'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.5ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.0ms)
+Started GET "/noticia/new" for 127.0.0.1 at 2017-03-09 17:20:11 -0800
+Processing by NoticiaController#new as HTML
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid @import: expected end of line, was ";".):
+    4:     <title>Noticiasapp</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.css.sass:18
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__3260235412160520667_69945708958620'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.3ms)
+Started GET "/noticia/new" for 127.0.0.1 at 2017-03-09 17:20:22 -0800
+Processing by NoticiaController#new as HTML
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/new.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap.
+Load paths:
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/config
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/images
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/javascripts
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/stylesheets
+  /home/mihurtado/Git/iic3103-tarea1/vendor/assets/javascripts
+  /home/mihurtado/Git/iic3103-tarea1/vendor/assets/stylesheets
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/jquery-rails-4.2.2/vendor/assets/javascripts
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actioncable-5.0.2/lib/assets/compiled
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
+    4:     <title>Noticiasapp</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.css.sass:18
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__3260235412160520667_69945694294360'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.4ms)
+Started GET "/noticia/new" for 127.0.0.1 at 2017-03-09 17:20:23 -0800
+Processing by NoticiaController#new as HTML
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap.
+Load paths:
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/config
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/images
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/javascripts
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/stylesheets
+  /home/mihurtado/Git/iic3103-tarea1/vendor/assets/javascripts
+  /home/mihurtado/Git/iic3103-tarea1/vendor/assets/stylesheets
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/jquery-rails-4.2.2/vendor/assets/javascripts
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actioncable-5.0.2/lib/assets/compiled
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
+    4:     <title>Noticiasapp</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.css.sass:18
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__3260235412160520667_47204112173980'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.7ms)
+Started GET "/noticia/new" for 127.0.0.1 at 2017-03-09 17:20:24 -0800
+Processing by NoticiaController#new as HTML
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap.
+Load paths:
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/config
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/images
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/javascripts
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/stylesheets
+  /home/mihurtado/Git/iic3103-tarea1/vendor/assets/javascripts
+  /home/mihurtado/Git/iic3103-tarea1/vendor/assets/stylesheets
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/jquery-rails-4.2.2/vendor/assets/javascripts
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actioncable-5.0.2/lib/assets/compiled
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
+    4:     <title>Noticiasapp</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.css.sass:18
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__3260235412160520667_69945706363400'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.4ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.7ms)
+Started GET "/noticia/new" for 127.0.0.1 at 2017-03-09 17:20:25 -0800
+Processing by NoticiaController#new as HTML
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/new.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap.
+Load paths:
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/config
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/images
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/javascripts
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/stylesheets
+  /home/mihurtado/Git/iic3103-tarea1/vendor/assets/javascripts
+  /home/mihurtado/Git/iic3103-tarea1/vendor/assets/stylesheets
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/jquery-rails-4.2.2/vendor/assets/javascripts
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actioncable-5.0.2/lib/assets/compiled
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
+    4:     <title>Noticiasapp</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.css.sass:18
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__3260235412160520667_69945704206160'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (13.7ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.3ms)
+Started GET "/noticia/new" for 127.0.0.1 at 2017-03-09 17:20:26 -0800
+Processing by NoticiaController#new as HTML
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/new.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap.
+Load paths:
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/config
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/images
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/javascripts
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/stylesheets
+  /home/mihurtado/Git/iic3103-tarea1/vendor/assets/javascripts
+  /home/mihurtado/Git/iic3103-tarea1/vendor/assets/stylesheets
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/jquery-rails-4.2.2/vendor/assets/javascripts
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actioncable-5.0.2/lib/assets/compiled
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
+    4:     <title>Noticiasapp</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.css.sass:18
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__3260235412160520667_69945626841500'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.9ms)
+Started GET "/noticia/new" for 127.0.0.1 at 2017-03-09 17:20:27 -0800
+Processing by NoticiaController#new as HTML
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap.
+Load paths:
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/config
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/images
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/javascripts
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/stylesheets
+  /home/mihurtado/Git/iic3103-tarea1/vendor/assets/javascripts
+  /home/mihurtado/Git/iic3103-tarea1/vendor/assets/stylesheets
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/jquery-rails-4.2.2/vendor/assets/javascripts
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actioncable-5.0.2/lib/assets/compiled
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
+    4:     <title>Noticiasapp</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.css.sass:18
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__3260235412160520667_69945624053840'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.8ms)
+Started GET "/noticia/new" for 127.0.0.1 at 2017-03-09 17:20:27 -0800
+Processing by NoticiaController#new as HTML
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/new.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap.
+Load paths:
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/config
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/images
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/javascripts
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/stylesheets
+  /home/mihurtado/Git/iic3103-tarea1/vendor/assets/javascripts
+  /home/mihurtado/Git/iic3103-tarea1/vendor/assets/stylesheets
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/jquery-rails-4.2.2/vendor/assets/javascripts
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actioncable-5.0.2/lib/assets/compiled
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
+    4:     <title>Noticiasapp</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.css.sass:18
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__3260235412160520667_69945709807980'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.0ms)
+Started GET "/noticia/new" for 127.0.0.1 at 2017-03-09 17:20:28 -0800
+Processing by NoticiaController#new as HTML
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap.
+Load paths:
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/config
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/images
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/javascripts
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/stylesheets
+  /home/mihurtado/Git/iic3103-tarea1/vendor/assets/javascripts
+  /home/mihurtado/Git/iic3103-tarea1/vendor/assets/stylesheets
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/jquery-rails-4.2.2/vendor/assets/javascripts
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actioncable-5.0.2/lib/assets/compiled
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
+    4:     <title>Noticiasapp</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.css.sass:18
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__3260235412160520667_69945702969640'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.4ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.0ms)
+Started GET "/noticia/new" for 127.0.0.1 at 2017-03-09 17:22:35 -0800
+Processing by NoticiaController#new as HTML
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/new.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/config
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/images
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/javascripts
+  /home/mihurtado/Git/iic3103-tarea1/app/assets/stylesheets
+  /home/mihurtado/Git/iic3103-tarea1/vendor/assets/javascripts
+  /home/mihurtado/Git/iic3103-tarea1/vendor/assets/stylesheets
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/jquery-rails-4.2.2/vendor/assets/javascripts
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actioncable-5.0.2/lib/assets/compiled
+  /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
+    4:     <title>Noticiasapp</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:18
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__3260235412160520667_69945693848920'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.9ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.2ms)
+Started GET "/noticia/new" for 127.0.0.1 at 2017-03-09 17:22:47 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by NoticiaController#new as HTML
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 2517ms (Views: 2488.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/noticia/1" for 127.0.0.1 at 2017-03-09 17:22:54 -0800
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNoticium Load (0.8ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 82ms (Views: 45.1ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/noticia/1" for 127.0.0.1 at 2017-03-09 17:29:38 -0800
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNoticium Load (0.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_nav with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/mihurtado/Git/iic3103-tarea1/app/views"
+):
+    10: 
+    11:   <body>
+    12: 
+    13:     <%= render 'shared/nav' %>
+    14: 
+    15:     <div class="container">
+    16:       <%= yield %>
+  
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___4534076918887831513_69927120318840'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.4ms)
+Started GET "/noticia/1" for 127.0.0.1 at 2017-03-09 17:32:39 -0800
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNoticium Load (1.6ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"administrador", :id=>"1"}):
+    24:         <div id="navbar" class="collapse navbar-collapse">
+    25:           <ul class="nav navbar-nav">
+    26:             <li class="active"><%= link_to 'Ver Noticias', controller: 'noticia' %></li>
+    27:             <li><%= link_to 'Administrador', controller: 'administrador' %></li>
+    28:           </ul>
+    29:         </div><!--/.nav-collapse -->
+    30:       </div>
+  
+app/views/layouts/application.html.erb:27:in `_app_views_layouts_application_html_erb___4534076918887831513_69927130921760'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.1ms)
+Started GET "/noticia/1" for 127.0.0.1 at 2017-03-09 17:32:41 -0800
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNoticium Load (1.6ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"administrador", :id=>"1"}):
+    24:         <div id="navbar" class="collapse navbar-collapse">
+    25:           <ul class="nav navbar-nav">
+    26:             <li class="active"><%= link_to 'Ver Noticias', controller: 'noticia' %></li>
+    27:             <li><%= link_to 'Administrador', controller: 'administrador' %></li>
+    28:           </ul>
+    29:         </div><!--/.nav-collapse -->
+    30:       </div>
+  
+app/views/layouts/application.html.erb:27:in `_app_views_layouts_application_html_erb___4534076918887831513_69927120858100'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.9ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.0ms)
+Started GET "/noticia/1" for 127.0.0.1 at 2017-03-09 17:32:52 -0800
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNoticium Load (0.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/noticia/1" for 127.0.0.1 at 2017-03-09 17:34:00 -0800
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNoticium Load (0.7ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 153ms (Views: 150.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/noticia" for 127.0.0.1 at 2017-03-09 17:34:03 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  Rendered noticia/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 144ms (Views: 142.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/noticia" for 127.0.0.1 at 2017-03-09 17:34:05 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  Rendered noticia/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 78ms (Views: 77.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-09 17:37:38 -0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 78ms (Views: 74.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-09 17:41:14 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  Rendered noticia/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/mihurtado/Git/iic3103-tarea1/app/views/noticia/index.html.erb:9: syntax error, unexpected keyword_end
+ze;@output_buffer.append=( end );@output_buffer.safe_append=
+                              ^
+/home/mihurtado/Git/iic3103-tarea1/app/views/noticia/index.html.erb:12: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/mihurtado/Git/iic3103-tarea1/app/views/noticia/index.html.erb:14: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/noticia/index.html.erb:9: syntax error, unexpected keyword_end
+app/views/noticia/index.html.erb:12: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/noticia/index.html.erb:14: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.7ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.0ms)
+Started GET "/" for 127.0.0.1 at 2017-03-09 17:41:29 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (1.6ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia"[0m
+  Rendered noticia/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 1288ms (Views: 1262.7ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-09 17:43:45 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (1.0ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia"[0m
+  Rendered noticia/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 1864ms (Views: 1862.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-09 17:44:25 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (2.5ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia"[0m
+  Rendered noticia/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 1280ms (Views: 1275.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-09 17:44:39 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (1.2ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia"[0m
+  Rendered noticia/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 1248ms (Views: 1244.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-09 17:44:47 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (1.4ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia"[0m
+  Rendered noticia/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 1249ms (Views: 1246.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-09 17:45:14 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.6ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia"[0m
+  Rendered noticia/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 1221ms (Views: 1216.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-09 17:45:38 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (1.0ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia"[0m
+  Rendered noticia/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 1406ms (Views: 1404.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-09 17:52:14 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.5ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia"[0m
+  Rendered noticia/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 57ms (Views: 55.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-09 17:52:16 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.4ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia"[0m
+  Rendered noticia/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 63ms (Views: 61.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-09 17:52:44 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.4ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia"[0m
+  Rendered noticia/index.html.erb within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 241ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_noticia_path' for #<#<Class:0x007f325a707838>:0x007f325a7493f0>
+Did you mean?  new_noticium_path
+               noticia_path):
+    24:         <div id="navbar" class="collapse navbar-collapse">
+    25:           <ul class="nav navbar-nav">
+    26:             <li class="active"><%= link_to 'Ver Noticias', controller: 'noticia' %></li>
+    27:             <li><%= link_to 'Administrador', new_noticia_path %></li>
+    28:           </ul>
+    29:         </div><!--/.nav-collapse -->
+    30:       </div>
+  
+app/views/layouts/application.html.erb:27:in `_app_views_layouts_application_html_erb___4534076918887831513_69927121331880'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.1ms)
+Started GET "/" for 127.0.0.1 at 2017-03-09 17:53:29 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.4ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia"[0m
+  Rendered noticia/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 104ms (Views: 102.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-09 17:54:48 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (2.3ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia"[0m
+  Rendered noticia/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 73ms (Views: 70.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/noticia/1" for 127.0.0.1 at 2017-03-09 17:54:51 -0800
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNoticium Load (0.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 82ms (Views: 78.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/noticia/1" for 127.0.0.1 at 2017-03-09 17:54:54 -0800
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNoticium Load (0.2ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 74ms (Views: 70.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-09 17:59:59 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.7ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia"[0m
+  Rendered noticia/index.html.erb within layouts/application (108.0ms)
+Completed 500 Internal Server Error in 122ms (ActiveRecord: 6.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `truncar' for #<#<Class:0x007f325adccd30>:0x007f325a46faa8>
+Did you mean?  truncate):
+    4:       <h1><%= noticia.titulo %></h1>
+    5:       <p><%= noticia.bajada %></p>
+    6:       <hr>
+    7:       <p><%= truncar noticia.cuerpo %></p>
+    8:       <p class="text-right"><%= link_to 'Ver', noticium_path(noticia) %></p>
+    9:     </div>
+   10:   <% end %>
+  
+app/views/noticia/index.html.erb:7:in `block in _app_views_noticia_index_html_erb___1598340750656527523_69927124757340'
+app/views/noticia/index.html.erb:2:in `_app_views_noticia_index_html_erb___1598340750656527523_69927124757340'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.6ms)
+Started GET "/" for 127.0.0.1 at 2017-03-09 18:01:16 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (2.0ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia"[0m
+  Rendered noticia/index.html.erb within layouts/application (14.7ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `lenght' for "asd":String
+Did you mean?  length):
+    4:       <h1><%= noticia.titulo %></h1>
+    5:       <p><%= noticia.bajada %></p>
+    6:       <hr>
+    7:       <p><%= truncar noticia.cuerpo %></p>
+    8:       <p class="text-right"><%= link_to 'Ver', noticium_path(noticia) %></p>
+    9:     </div>
+   10:   <% end %>
+  
+app/helpers/noticia_helper.rb:4:in `truncar'
+app/views/noticia/index.html.erb:7:in `block in _app_views_noticia_index_html_erb___1598340750656527523_69926836244660'
+app/views/noticia/index.html.erb:2:in `_app_views_noticia_index_html_erb___1598340750656527523_69926836244660'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.6ms)
+Started GET "/" for 127.0.0.1 at 2017-03-09 18:01:17 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.8ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia"[0m
+  Rendered noticia/index.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `lenght' for "asd":String
+Did you mean?  length):
+    4:       <h1><%= noticia.titulo %></h1>
+    5:       <p><%= noticia.bajada %></p>
+    6:       <hr>
+    7:       <p><%= truncar noticia.cuerpo %></p>
+    8:       <p class="text-right"><%= link_to 'Ver', noticium_path(noticia) %></p>
+    9:     </div>
+   10:   <% end %>
+  
+app/helpers/noticia_helper.rb:4:in `truncar'
+app/views/noticia/index.html.erb:7:in `block in _app_views_noticia_index_html_erb___1598340750656527523_69926833664120'
+app/views/noticia/index.html.erb:2:in `_app_views_noticia_index_html_erb___1598340750656527523_69926833664120'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.9ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.8ms)
+Started GET "/" for 127.0.0.1 at 2017-03-09 18:01:43 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.4ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia"[0m
+  Rendered noticia/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 123ms (Views: 109.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-09 18:01:48 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.4ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia"[0m
+  Rendered noticia/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 61ms (Views: 56.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-09 18:01:56 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.5ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia"[0m
+  Rendered noticia/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 62ms (Views: 46.5ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-09 18:02:05 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.8ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia"[0m
+  Rendered noticia/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 68ms (Views: 59.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/noticia/new" for 127.0.0.1 at 2017-03-09 18:02:22 -0800
+Processing by NoticiaController#new as HTML
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 71ms (Views: 68.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/noticia/new" for 127.0.0.1 at 2017-03-09 18:02:25 -0800
+Processing by NoticiaController#new as HTML
+  Rendering noticia/new.html.erb within layouts/application
+  Rendered noticia/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 45ms (Views: 44.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-09 18:02:27 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.5ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia"[0m
+  Rendered noticia/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 48ms (Views: 46.7ms | ActiveRecord: 0.5ms)
+
+

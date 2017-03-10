@@ -1,0 +1,11 @@
+<div class="row">
+  <% @noticias.each do |noticia| %>
+    <div class="col-sm-4 col-xs-6 noticia">
+      <h1><%= noticia.titulo %></h1>
+      <p><%= noticia.bajada %></p>
+      <hr>
+      <p><%= truncar noticia.cuerpo %></p>
+      <p class="text-right"><%= link_to 'Ver', noticium_path(noticia) %></p>
+    </div>
+  <% end %>
+</div>
