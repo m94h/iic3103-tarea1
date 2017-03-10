@@ -3,3 +3,32 @@
 <p><%= @noticia.bajada %></p>
 <hr>
 <p><%= @noticia.cuerpo %></p>
+
+<hr>
+
+<h3>Comentarios <span class="label label-default"><%= @noticia.comentarios.length %></span></h3>
+<% @noticia.comentarios.each do |comentario| %>
+<div class="bg-success">
+  <p class="small"><strong>Publicado por <%= comentario.autor %> el <%= comentario.created_at %></strong></p>
+  <p><%= comentario.contenido %></p>
+</div>
+<% end %>
+<hr>
+<p>Ingresar un nuevo comentario</p>
+<%= form_for([@noticia, @noticia.comentarios.build]) do |f| %>
+
+  <div class="form-group">
+    <%= f.label :autor %>
+    <%= f.text_field :autor, :class => 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :contenido %>
+    <%= f.text_area :contenido, :class => 'form-control' %>
+  </div>
+
+  <div>
+    <%= f.submit nil, :class => 'btn btn-default' %>
+  </div>
+
+<% end %>

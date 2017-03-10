@@ -6,7 +6,10 @@
         <p><%= noticia.bajada %></p>
         <hr>
         <p><%= truncar noticia.cuerpo %></p>
-        <p class="text-right"><%= link_to 'Ver', noticium_path(noticia), :class => 'btn btn-default' %></p>
+        <div class="clearfix">
+          <p class="pull-left"><span class="label label-default"><%= noticia.comentarios.length %> <%= (noticia.comentarios.length == 1) ? 'comentario' : 'comentarios' %></span></p>
+          <p class="pull-right"><%= link_to 'Ver', noticium_path(noticia), :class => 'btn btn-default btn-sm' %></p>
+        </div>
       </div>
     </div>
   <% end %>

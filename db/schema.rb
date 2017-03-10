@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170310003955) do
+ActiveRecord::Schema.define(version: 20170310205055) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comentarios", force: :cascade do |t|
+    t.string   "autor"
+    t.text     "contenido"
+    t.integer  "noticium_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["noticium_id"], name: "index_comentarios_on_noticium_id", using: :btree
+  end
 
   create_table "noticia", force: :cascade do |t|
     t.string   "titulo"
@@ -23,4 +32,5 @@ ActiveRecord::Schema.define(version: 20170310003955) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "comentarios", "noticia"
 end

@@ -3133,3 +3133,1601 @@ Processing by NoticiaController#index as HTML
 Completed 200 OK in 86ms (Views: 84.1ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/noticia/admin" for 127.0.0.1 at 2017-03-10 12:47:26 -0800
+Processing by NoticiaController#admin as HTML
+  Rendering noticia/admin.html.erb within layouts/application
+  [1m[36mNoticium Load (0.5ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC[0m
+  Rendered noticia/admin.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 82ms (Views: 80.1ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/noticia/8" for 127.0.0.1 at 2017-03-10 12:47:35 -0800
+Processing by NoticiaController#destroy as HTML
+  Parameters: {"authenticity_token"=>"z91ZSdnJ2cLi29eG/coAT0ajwGcyITgu0boy93m19aLNSa1OZixlFLccPLMgTSmDHgGkVDNPYaWaHBBbfq+/Yw==", "id"=>"8"}
+  [1m[36mNoticium Load (0.3ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "noticia" WHERE "noticia"."id" = $1[0m  [["id", 8]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/noticia/admin
+Completed 302 Found in 7ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/noticia/admin" for 127.0.0.1 at 2017-03-10 12:47:35 -0800
+Processing by NoticiaController#admin as HTML
+  Rendering noticia/admin.html.erb within layouts/application
+  [1m[36mNoticium Load (0.9ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC[0m
+  Rendered noticia/admin.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 75ms (Views: 73.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 12:47:37 -0800
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.7ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 89ms (Views: 84.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 17:48:17 -0300
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.7ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 86ms (Views: 84.0ms | ActiveRecord: 0.7ms)
+
+
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3863481123285700140);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateComentarios (20170310205055)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (68.4ms)[0m  [1m[35mCREATE TABLE "comentarios" ("id" serial primary key, "autor" character varying, "contenido" text, "noticia_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_b9a01136e8"
+FOREIGN KEY ("noticia_id")
+  REFERENCES "noticia" ("id")
+)[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE  INDEX  "index_comentarios_on_noticia_id" ON "comentarios"  ("noticia_id")[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170310205055"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(3863481123285700140)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 18:03:05 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (1.5ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 5.3ms)
+
+
+  
+SyntaxError (/home/mihurtado/Git/iic3103-tarea1/app/views/noticia/show.html.erb:16: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/noticia/show.html.erb:16: syntax error, unexpected keyword_ensure, expecting keyword_end
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.7ms)
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 18:03:18 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (3.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (61.2ms)
+Completed 200 OK in 1830ms (Views: 1818.4ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 18:05:53 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (0.8ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 91ms (Views: 88.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 18:06:03 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (1.6ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (19.0ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column comentarios.noticium_id does not exist
+LINE 1: SELECT "comentarios".* FROM "comentarios" WHERE "comentarios...
+                                                        ^
+HINT:  Perhaps you meant to reference the column "comentarios.noticia_id".
+: SELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1):
+     6: 
+     7: <hr>
+     8: 
+     9: <h3>Comentarios <span class="label label-default"><%= @noticia.comentario.length %></span></h3>
+    10: <% @noticia.comentario do |com| %>
+    11: <div class="bg-success">
+    12:   <p class="small"><strong>Publicado por <%= com.autor %> el <%= com.created_at %></strong></p>
+  
+app/views/noticia/show.html.erb:9:in `_app_views_noticia_show_html_erb__3545424556851662872_69959184519460'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.4ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.6ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.9ms)
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 18:06:35 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (0.2ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (16.3ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comentarios' for #<Noticium:0x007f41396f28f0>
+Did you mean?  comentario
+               comentario=
+               comentario_ids):
+     6: 
+     7: <hr>
+     8: 
+     9: <h3>Comentarios <span class="label label-default"><%= @noticia.comentarios.length %></span></h3>
+    10: <% @noticia.comentarios do |comentario| %>
+    11: <div class="bg-success">
+    12:   <p class="small"><strong>Publicado por <%= comentario.autor %> el <%= comentario.created_at %></strong></p>
+  
+app/views/noticia/show.html.erb:9:in `_app_views_noticia_show_html_erb__3545424556851662872_69959056511340'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.9ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.3ms)
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 18:07:03 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (0.5ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column comentarios.noticium_id does not exist
+LINE 1: SELECT "comentarios".* FROM "comentarios" WHERE "comentarios...
+                                                        ^
+HINT:  Perhaps you meant to reference the column "comentarios.noticia_id".
+: SELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1):
+     6: 
+     7: <hr>
+     8: 
+     9: <h3>Comentarios <span class="label label-default"><%= @noticia.comentario.length %></span></h3>
+    10: <% @noticia.comentario do |com| %>
+    11: <div class="bg-success">
+    12:   <p class="small"><strong>Publicado por <%= com.autor %> el <%= com.created_at %></strong></p>
+  
+app/views/noticia/show.html.erb:9:in `_app_views_noticia_show_html_erb__3545424556851662872_69959189762960'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.1ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.1ms)
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 18:08:09 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (0.5ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  Rendered noticia/show.html.erb within layouts/application (23.7ms)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 15.0ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column comentarios.noticium_id does not exist
+LINE 1: SELECT "comentarios".* FROM "comentarios" WHERE "comentarios...
+                                                        ^
+HINT:  Perhaps you meant to reference the column "comentarios.noticia_id".
+: SELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1):
+     6: 
+     7: <hr>
+     8: 
+     9: <h3>Comentarios <span class="label label-default"><%= @noticia.comentarios.length %></span></h3>
+    10: <% @noticia.comentarios do |comentario| %>
+    11: <div class="bg-success">
+    12:   <p class="small"><strong>Publicado por <%= comentario.autor %> el <%= comentario.created_at %></strong></p>
+  
+app/views/noticia/show.html.erb:9:in `_app_views_noticia_show_html_erb__3545424556851662872_69959057098660'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.4ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (40.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3863481123285700140);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateComentarios (20170310205055)
+  [1m[35m (3.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.3ms)[0m  [1m[35mDROP TABLE "comentarios"[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20170310205055"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(3863481123285700140)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3863481123285700140);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateComentarios (20170310205055)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "comentarios" ("id" serial primary key, "autor" character varying, "contenido" text, "noticium_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_59ce1b0308"
+FOREIGN KEY ("noticium_id")
+  REFERENCES "noticia" ("id")
+)[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE  INDEX  "index_comentarios_on_noticium_id" ON "comentarios"  ("noticium_id")[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170310205055"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(3863481123285700140)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 18:10:01 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (1.0ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (0.6ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 185ms (Views: 124.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 18:16:33 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (0.5ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (1.0ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (40.5ms)
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 7.2ms)
+
+
+  
+ActionView::Template::Error (unknown attribute 'noticium_id' for Comentario.):
+    13:   <p><%= comentario.contenido %></p>
+    14: </div>
+    15: <% end %>
+    16: <% form_for([@noticia, @noticia.comentarios.build]) do |f| %>
+    17: 
+    18:   <div class="form-group">
+    19:     <%= f.label :autor %><br>
+  
+app/views/noticia/show.html.erb:16:in `_app_views_noticia_show_html_erb__3545424556851662872_69959145545980'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.8ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.9ms)
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 18:30:40 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/noticia/4"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered collection of /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [18 times] (15.4ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (57.8ms)
+Started GET "/" for 127.0.0.1 at 2017-03-10 18:30:45 -0300
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.7ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 1994ms (Views: 1974.6ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/noticium/4" for 127.0.0.1 at 2017-03-10 18:30:49 -0300
+  
+ActionController::RoutingError (uninitialized constant NoticiumController):
+  
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:268:in `const_get'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:268:in `block in constantize'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `each'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `inject'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `constantize'
+actionpack (5.0.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:30:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendered collection of /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [18 times] (16.6ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.3ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (69.8ms)
+Started GET "/noticium/4" for 127.0.0.1 at 2017-03-10 18:31:18 -0300
+  
+ActionController::RoutingError (uninitialized constant NoticiumController):
+  
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:268:in `const_get'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:268:in `block in constantize'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `each'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `inject'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `constantize'
+actionpack (5.0.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:30:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered collection of /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [18 times] (13.6ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.4ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.4ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (66.8ms)
+Started GET "/noticium/4" for 127.0.0.1 at 2017-03-10 18:31:20 -0300
+  
+ActionController::RoutingError (uninitialized constant NoticiumController):
+  
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:268:in `const_get'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:268:in `block in constantize'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `each'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `inject'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `constantize'
+actionpack (5.0.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:30:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered collection of /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [18 times] (8.3ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.3ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (45.6ms)
+Started GET "/noticium/4" for 127.0.0.1 at 2017-03-10 18:31:21 -0300
+  
+ActionController::RoutingError (uninitialized constant NoticiumController):
+  
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:268:in `const_get'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:268:in `block in constantize'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `each'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `inject'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `constantize'
+actionpack (5.0.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:30:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered collection of /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [18 times] (10.4ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.1ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (50.0ms)
+Started GET "/" for 127.0.0.1 at 2017-03-10 18:31:39 -0300
+  
+ActionController::RoutingError (uninitialized constant NoticiumController):
+  
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:268:in `const_get'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:268:in `block in constantize'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `each'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `inject'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `constantize'
+actionpack (5.0.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:30:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered collection of /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [18 times] (14.5ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (59.4ms)
+Started GET "/" for 127.0.0.1 at 2017-03-10 18:32:12 -0300
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (1.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (39.9ms)
+Completed 200 OK in 154ms (Views: 125.6ms | ActiveRecord: 23.2ms)
+
+
+Started GET "/noticia/admin" for 127.0.0.1 at 2017-03-10 18:32:14 -0300
+Processing by NoticiaController#admin as HTML
+  Rendering noticia/admin.html.erb within layouts/application
+  [1m[36mNoticium Load (0.7ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC[0m
+  Rendered noticia/admin.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 92ms (Views: 89.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/noticia/4/edit" for 127.0.0.1 at 2017-03-10 18:32:15 -0300
+Processing by NoticiaController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (1.0ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/edit.html.erb within layouts/application
+  Rendered noticia/_formulario_edit.html.erb (10.8ms)
+  Rendered noticia/edit.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 103ms (Views: 99.7ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/noticia/4" for 127.0.0.1 at 2017-03-10 18:32:16 -0300
+Processing by NoticiaController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yXzbQxMxb1pNgok92EvpgwPZE8EB8yJoIm9ublBt6B8zNBgUeRcT9YejV0p6XZsy4dz+cFQaLOCf+Ggk+XcqWA==", "noticium"=>{"titulo"=>"Nueva noticia", "bajada"=>"Hola", "cuerpo"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at elit eget velit accumsan consequat. Nunc viverra neque magna, sit amet ultrices quam convallis ut. Vestibulum suscipit ut nulla nec rutrum. Sed ultrices dolor ac mattis faucibus. Praesent nibh lectus, sollicitudin at sollicitudin vel, mollis eget libero. Vestibulum mattis vitae augue non interdum. Donec eget magna semper, sodales quam ut, sollicitudin neque. Ut vitae posuere ipsum. Proin placerat eros vel mollis pellentesque. In eu leo eu turpis malesuada gravida sit amet sed lectus. Cras iaculis turpis felis, sit amet sagittis purus faucibus quis. Cras malesuada, erat sit amet congue consequat, massa est mollis ante, sit amet congue sapien magna non lectus. Etiam pretium, justo nec mattis viverra, massa nisi interdum turpis, non fringilla quam diam sit amet purus. "}, "commit"=>"Update Noticium", "id"=>"4"}
+  [1m[36mNoticium Load (0.3ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/noticia/4
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 18:32:16 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (2.9ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (2.2ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (63.7ms)
+Completed 200 OK in 191ms (Views: 169.2ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 18:32:41 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (6.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (4.8ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 145ms (Views: 130.6ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 18:32:49 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (0.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (0.5ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 75ms (Views: 73.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 18:33:27 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (0.3ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (0.9ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (29.3ms)
+Completed 200 OK in 114ms (Views: 110.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 18:33:28 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (0.5ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (3.9ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 111ms (Views: 104.5ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 18:33:33 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (0.2ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (0.8ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 82ms (Views: 79.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 18:35:19 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (2.5ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (0.9ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (105.6ms)
+Completed 200 OK in 794ms (Views: 739.3ms | ActiveRecord: 21.0ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 18:35:45 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (1.3ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (1.7ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 101ms (Views: 96.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 18:36:58 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (11.0ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (1.5ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 201ms (Views: 184.3ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 18:37:03 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (3.0ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (1.0ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 161ms (Views: 152.8ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 18:37:50 -0300
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (1.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 103ms (Views: 100.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 18:38:25 -0300
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (3.1ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered noticia/index.html.erb within layouts/application (12.4ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 3.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `comentarios' for nil:NilClass):
+     6:         <p><%= noticia.bajada %></p>
+     7:         <hr>
+     8:         <p><%= truncar noticia.cuerpo %></p>
+     9:         <p class="float-left"><%= @noticia.comentarios.length %></p>
+    10:         <p class="float-right"><%= link_to 'Ver', noticium_path(noticia), :class => 'btn btn-default' %></p>
+    11:       </div>
+    12:     </div>
+  
+app/views/noticia/index.html.erb:9:in `block in _app_views_noticia_index_html_erb___1805033383177751702_47302901221480'
+app/views/noticia/index.html.erb:2:in `_app_views_noticia_index_html_erb___1805033383177751702_47302901221480'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.9ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.1ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.4ms)
+Started GET "/" for 127.0.0.1 at 2017-03-10 18:39:11 -0300
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.6ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  [1m[36mComentario Load (0.3ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  [1m[36mComentario Load (0.3ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 3]]
+  Rendered noticia/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 93ms (Views: 90.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 18:39:37 -0300
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (1.7ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  [1m[36mComentario Load (0.4ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  [1m[36mComentario Load (4.1ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 3]]
+  Rendered noticia/index.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 137ms (Views: 125.9ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 18:40:43 -0300
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.7ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  [1m[36mComentario Load (1.4ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  [1m[36mComentario Load (1.3ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 3]]
+  Rendered noticia/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 108ms (Views: 103.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 18:40:55 -0300
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (1.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  [1m[36mComentario Load (0.6ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  [1m[36mComentario Load (1.1ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 3]]
+  Rendered noticia/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 130ms (Views: 125.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 18:41:08 -0300
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (3.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  [1m[36mComentario Load (0.6ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  [1m[36mComentario Load (1.2ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 3]]
+  Rendered noticia/index.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 113ms (Views: 106.2ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 18:41:15 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (0.6ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (0.4ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 116ms (Views: 112.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 18:42:30 -0300
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (2.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  [1m[36mComentario Load (0.3ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  [1m[36mComentario Load (0.4ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 3]]
+  Rendered noticia/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 127ms (Views: 117.9ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 18:42:32 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (0.2ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (0.8ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 134ms (Views: 131.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 18:49:52 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (2.5ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (1.1ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (42.1ms)
+Completed 200 OK in 156ms (Views: 133.4ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/noticia/4/comentarios" for 127.0.0.1 at 2017-03-10 18:49:56 -0300
+Processing by ComentariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7IAduUqfAJZ7Dny5vlvn95j9iRjY6R6Dzq3ARW/Ov8LuFOm+9Xq8QC7Jl4xj3M47wF/tK9mHRwiFC+LpaNT1Aw==", "comentario"=>{"autor"=>"", "contenido"=>""}, "commit"=>"Create Comentario", "noticium_id"=>"4"}
+  [1m[36mNoticium Load (0.6ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 8ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Noticium with 'id'=):
+  
+app/controllers/comentarios_controller.rb:4:in `create'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.5ms)
+Started POST "/noticia/4/comentarios" for 127.0.0.1 at 2017-03-10 18:50:08 -0300
+Processing by ComentariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7IAduUqfAJZ7Dny5vlvn95j9iRjY6R6Dzq3ARW/Ov8LuFOm+9Xq8QC7Jl4xj3M47wF/tK9mHRwiFC+LpaNT1Aw==", "comentario"=>{"autor"=>"", "contenido"=>""}, "commit"=>"Create Comentario", "noticium_id"=>"4"}
+  [1m[36mNoticium Load (1.1ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/noticia/4
+Completed 302 Found in 80ms (ActiveRecord: 12.8ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 18:50:08 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (4.7ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (2.4ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 112ms (Views: 99.9ms | ActiveRecord: 7.1ms)
+
+
+Started POST "/noticia/4/comentarios" for 127.0.0.1 at 2017-03-10 18:50:11 -0300
+Processing by ComentariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H0Oc0ejy0iN3A9yLE+LdXhu9Hxyc3EivReaoRDDMghwd12jWVxdu9SLEN77OZfSSQx97L52yESQOQIroN9bI3Q==", "comentario"=>{"autor"=>"", "contenido"=>""}, "commit"=>"Create Comentario", "noticium_id"=>"4"}
+  [1m[36mNoticium Load (0.3ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/noticia/4
+Completed 302 Found in 12ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 18:50:11 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (1.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (1.5ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 108ms (Views: 96.1ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/noticia/4/comentarios" for 127.0.0.1 at 2017-03-10 18:52:11 -0300
+Processing by ComentariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cPfMRRxjF6zXcd13h6DWy5us866BvE80lxCvzgkABXByYzhCo4areoK2NkJaJ/8Hww6XnYDSFr/cto1iDhpPsQ==", "comentario"=>{"autor"=>"matias", "contenido"=>"Hola"}, "commit"=>"Create Comentario", "noticium_id"=>"4"}
+  [1m[36mNoticium Load (1.7ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/noticia/4
+Completed 302 Found in 142ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 18:52:12 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (3.5ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (0.6ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 201ms (Views: 185.5ms | ActiveRecord: 4.1ms)
+
+
+Started POST "/noticia/4/comentarios" for 127.0.0.1 at 2017-03-10 18:56:47 -0300
+Processing by ComentariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zzqrRExT5hGdc0DwmryNpRX1gvYpnCvp+RFPnWS2L3nNrl9D87Zax8i0q8VHO6RpTVfmxSjycmKyt20xY6xluA==", "comentario"=>{"autor"=>"asd", "contenido"=>"asd"}, "commit"=>"Create Comentario", "noticium_id"=>"4"}
+  [1m[36mNoticium Load (1.7ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/noticia/4
+Completed 302 Found in 90ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 18:56:48 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (0.5ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (0.9ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 125ms (Views: 115.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 18:58:18 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (0.5ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (0.5ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 133ms (Views: 125.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/noticia/4/comentarios" for 127.0.0.1 at 2017-03-10 18:58:21 -0300
+Processing by ComentariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8iv1Pc6mV8Pw60mCK9cZhfoh+gwtfewbRnjQCWg7PYDwvwE6cUPrFaUsorf2UDBJooOePywTtZAN3vKlbyF3QQ==", "comentario"=>{"autor"=>"asd", "contenido"=>"asd"}, "commit"=>"Create Comentario", "noticium_id"=>"4"}
+  [1m[36mNoticium Load (1.6ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/noticia/4
+Completed 302 Found in 19ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 18:58:21 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (4.3ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (0.6ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 98ms (Views: 88.4ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/noticia/4/comentarios" for 127.0.0.1 at 2017-03-10 18:58:33 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ComentariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YgEBOPHoC+vv8mJernEvDDnnzIqWQHntwnto71rBj3NglfU/Tg23Pbo1iWtz9gbAYUWouZcuIGaJ3UpDXdvFsg==", "comentario"=>{"autor"=>"asd", "contenido"=>"asd"}, "commit"=>"Create Comentario", "noticium_id"=>"4"}
+  [1m[36mNoticium Load (0.7ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/noticia/4
+Completed 302 Found in 129ms (ActiveRecord: 11.4ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 18:58:34 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (0.6ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (0.6ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 461ms (Views: 458.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/noticia/4/comentarios" for 127.0.0.1 at 2017-03-10 18:59:48 -0300
+Processing by ComentariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DPa7Hw9YIMp9D0QVKMbTTPO7jnZurtl/c2v2q0NAB4QOYk8YsL2cHCjIryD1QfqAqxnqRW/AgPQ4zdQHRFpNRQ==", "comentario"=>{"autor"=>"asd", "contenido"=>"asd"}, "commit"=>"Create Comentario", "noticium_id"=>"4"}
+  [1m[36mNoticium Load (0.6ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+No template found for ComentariosController#create, rendering head :no_content
+Completed 204 No Content in 140ms (ActiveRecord: 10.9ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 19:00:09 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (1.1ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (1.1ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (58.7ms)
+Completed 200 OK in 248ms (Views: 181.3ms | ActiveRecord: 17.1ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 19:00:14 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (0.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (0.5ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 134ms (Views: 131.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/noticia/4/comentarios" for 127.0.0.1 at 2017-03-10 19:00:17 -0300
+Processing by ComentariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sTBpAQcs6/GkyxnyGhPnDxfZ6lrLU6cC58qG3yS3H7azpJ0GuMlXJ/EM8sfHlM7DT3uOaco9/omsbKRzI61Vdw==", "comentario"=>{"autor"=>"fdfefds", "contenido"=>"dfsdfsfds"}, "commit"=>"Create Comentario", "noticium_id"=>"4"}
+  [1m[36mNoticium Load (2.2ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+No template found for ComentariosController#create, rendering head :no_content
+Completed 204 No Content in 39ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 19:01:41 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (1.1ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (0.6ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (63.9ms)
+Completed 200 OK in 231ms (Views: 164.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 19:01:45 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (0.8ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (0.6ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 97ms (Views: 94.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/noticia/4/comentarios" for 127.0.0.1 at 2017-03-10 19:01:48 -0300
+Processing by ComentariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fe9CA+javZu2cjuodL6KXIewIMw7lHNobBNZ/Ko7/+Z/e7YEVz8BTeO10J2pOaOQ3xJE/zr6KuMntXtQrSG1Jw==", "comentario"=>{"autor"=>"asd", "contenido"=>"asd"}, "commit"=>"Create Comentario", "noticium_id"=>"4"}
+  [1m[36mNoticium Load (0.6ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://localhost:3000/noticia/4
+Completed 302 Found in 10ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 19:01:48 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (1.0ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (1.1ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 107ms (Views: 101.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/noticia/admin" for 127.0.0.1 at 2017-03-10 19:06:33 -0300
+Processing by NoticiaController#admin as HTML
+  Rendering noticia/admin.html.erb within layouts/application
+  [1m[36mNoticium Load (2.4ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC[0m
+  Rendered noticia/admin.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 185ms (Views: 147.7ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/noticia/4/edit" for 127.0.0.1 at 2017-03-10 19:06:34 -0300
+Processing by NoticiaController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (0.3ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/edit.html.erb within layouts/application
+  Rendered noticia/_formulario_edit.html.erb (5.8ms)
+  Rendered noticia/edit.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 190ms (Views: 186.6ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/noticia/4" for 127.0.0.1 at 2017-03-10 19:06:37 -0300
+Processing by NoticiaController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AH3X9yHmaUqkdagJCxePQHY26dMUeU3D19mttx7y++z6NRSgS8AV5W5Udn6pAf3xlDMEYkGQQ0tqTqv9t+g5qw==", "noticium"=>{"titulo"=>"Nueva noticia", "bajada"=>"Holaa", "cuerpo"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at elit eget velit accumsan consequat. Nunc viverra neque magna, sit amet ultrices quam convallis ut. Vestibulum suscipit ut nulla nec rutrum. Sed ultrices dolor ac mattis faucibus. Praesent nibh lectus, sollicitudin at sollicitudin vel, mollis eget libero. Vestibulum mattis vitae augue non interdum. Donec eget magna semper, sodales quam ut, sollicitudin neque. Ut vitae posuere ipsum. Proin placerat eros vel mollis pellentesque. In eu leo eu turpis malesuada gravida sit amet sed lectus. Cras iaculis turpis felis, sit amet sagittis purus faucibus quis. Cras malesuada, erat sit amet congue consequat, massa est mollis ante, sit amet congue sapien magna non lectus. Etiam pretium, justo nec mattis viverra, massa nisi interdum turpis, non fringilla quam diam sit amet purus. "}, "commit"=>"Update Noticium", "id"=>"4"}
+  [1m[36mNoticium Load (0.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.2ms)[0m  [1m[33mUPDATE "noticia" SET "bajada" = $1, "updated_at" = $2 WHERE "noticia"."id" = $3[0m  [["bajada", "Holaa"], ["updated_at", 2017-03-10 22:06:37 UTC], ["id", 4]]
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/noticia/4
+Completed 302 Found in 59ms (ActiveRecord: 10.4ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 19:06:37 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (2.5ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (1.8ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (55.4ms)
+Completed 200 OK in 144ms (Views: 128.9ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/noticia/admin" for 127.0.0.1 at 2017-03-10 19:06:41 -0300
+Processing by NoticiaController#admin as HTML
+  Rendering noticia/admin.html.erb within layouts/application
+  [1m[36mNoticium Load (1.4ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC[0m
+  Rendered noticia/admin.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 107ms (Views: 104.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 19:06:42 -0300
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.5ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  [1m[36mComentario Load (0.3ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  [1m[36mComentario Load (0.7ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 3]]
+  Rendered noticia/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 107ms (Views: 99.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 19:06:43 -0300
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.6ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  [1m[36mComentario Load (0.5ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 4]]
+  [1m[36mComentario Load (0.5ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 3]]
+  Rendered noticia/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 89ms (Views: 86.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/noticia/3" for 127.0.0.1 at 2017-03-10 19:06:45 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mNoticium Load (0.9ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (2.1ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 3]]
+  Rendered noticia/show.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 151ms (Views: 139.3ms | ActiveRecord: 5.6ms)
+
+
+Started POST "/noticia/3/comentarios" for 127.0.0.1 at 2017-03-10 19:06:49 -0300
+Processing by ComentariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h0GoJS8I0px1RgaBPvj7wluLxWpskywzxfMa5bnBkXE6oxWCHNmmq74rsRuVmHeRuBVgBWCpTkovclyRkVBDGQ==", "comentario"=>{"autor"=>"1", "contenido"=>"1"}, "commit"=>"Create Comentario", "noticium_id"=>"3"}
+  [1m[36mNoticium Load (0.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/noticia/3
+Completed 302 Found in 16ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/noticia/3" for 127.0.0.1 at 2017-03-10 19:06:49 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mNoticium Load (11.7ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (1.5ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 3]]
+  Rendered noticia/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 151ms (Views: 129.9ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/noticia/3" for 127.0.0.1 at 2017-03-10 19:13:44 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mNoticium Load (1.7ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (1.0ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 3]]
+  Rendered noticia/show.html.erb within layouts/application (49.2ms)
+Completed 200 OK in 182ms (Views: 125.8ms | ActiveRecord: 22.5ms)
+
+
+Started POST "/noticia/3/comentarios" for 127.0.0.1 at 2017-03-10 19:13:49 -0300
+Processing by ComentariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VrLqMFy6IgAYGUJEecpmm7nPp/HArC5XUadugWsG+bRUJh4341+e1k3eqXGkTU9X4W3DwsHCd9waAUwtbByzdQ==", "comentario"=>{"autor"=>"hhkj", "contenido"=>"3343"}, "commit"=>"Create Comentario", "noticium_id"=>"3"}
+  [1m[36mNoticium Load (4.5ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "comentarios" ("autor", "contenido", "noticium_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["autor", "hhkj"], ["contenido", "3343"], ["noticium_id", 3], ["created_at", 2017-03-10 22:13:49 UTC], ["updated_at", 2017-03-10 22:13:49 UTC]]
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/noticia/3
+Completed 302 Found in 19ms (ActiveRecord: 10.8ms)
+
+
+Started GET "/noticia/3" for 127.0.0.1 at 2017-03-10 19:13:49 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mNoticium Load (0.8ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (1.4ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 3]]
+  Rendered noticia/show.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 133ms (Views: 126.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/noticia/3" for 127.0.0.1 at 2017-03-10 19:14:05 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mNoticium Load (0.3ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (0.3ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 3]]
+  Rendered noticia/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 67ms (Views: 64.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/noticia/3" for 127.0.0.1 at 2017-03-10 19:15:13 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mNoticium Load (1.5ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (0.5ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 3]]
+  Rendered noticia/show.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 133ms (Views: 128.7ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/noticia/3/comentarios" for 127.0.0.1 at 2017-03-10 19:15:24 -0300
+Processing by ComentariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EdXmIF87KCKnMurVop13a/KDcv2yRhVh/u69gkU00scTQRIn4N6U9PL1AeB/Gl6nqiEWzrMoTOq1SJ8uQi6YBg==", "comentario"=>{"autor"=>"probando", "contenido"=>"hola"}, "commit"=>"Create Comentario", "noticium_id"=>"3"}
+  [1m[36mNoticium Load (3.5ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (26.0ms)[0m  [1m[32mINSERT INTO "comentarios" ("autor", "contenido", "noticium_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["autor", "probando"], ["contenido", "hola"], ["noticium_id", 3], ["created_at", 2017-03-10 22:15:24 UTC], ["updated_at", 2017-03-10 22:15:24 UTC]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/noticia/3
+Completed 302 Found in 48ms (ActiveRecord: 33.1ms)
+
+
+Started GET "/noticia/3" for 127.0.0.1 at 2017-03-10 19:15:24 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mNoticium Load (1.1ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (0.8ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 3]]
+  Rendered noticia/show.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 125ms (Views: 115.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/noticia/3" for 127.0.0.1 at 2017-03-10 19:15:39 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mNoticium Load (0.5ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (1.0ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1[0m  [["noticium_id", 3]]
+  Rendered noticia/show.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 1858ms (Views: 1852.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/noticia/3" for 127.0.0.1 at 2017-03-10 19:17:47 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"3"}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Unknown key: :order. Valid keys are: :class_name, :anonymous_class, :foreign_key, :validate, :autosave, :table_name, :before_add, :after_add, :before_remove, :after_remove, :extend, :primary_key, :dependent, :as, :through, :source, :source_type, :inverse_of, :counter_cache, :join_table, :foreign_type, :index_errors):
+  
+app/models/noticium.rb:2:in `<class:Noticium>'
+app/models/noticium.rb:1:in `<top (required)>'
+app/controllers/noticia_controller.rb:17:in `show'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.2ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (37.9ms)
+Started GET "/noticia/3" for 127.0.0.1 at 2017-03-10 19:18:46 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"3"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/mihurtado/Git/iic3103-tarea1/app/models/noticium.rb:2: syntax error, unexpected '\n', expecting =>):
+  
+app/models/noticium.rb:2: syntax error, unexpected '\n', expecting =>
+app/controllers/noticia_controller.rb:17:in `show'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (15.5ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (60.1ms)
+Started GET "/noticia/3" for 127.0.0.1 at 2017-03-10 19:19:59 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mNoticium Load (1.5ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (0.5ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1 ORDER BY "comentarios"."created_at" DESC[0m  [["noticium_id", 3]]
+  Rendered noticia/show.html.erb within layouts/application (41.1ms)
+Completed 200 OK in 187ms (Views: 141.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/noticia/3" for 127.0.0.1 at 2017-03-10 19:20:10 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"3"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/mihurtado/Git/iic3103-tarea1/app/models/noticium.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates :titulo, presence: true
+             ^):
+  
+app/models/noticium.rb:3: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/controllers/noticia_controller.rb:17:in `show'
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/mihurtado/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.0ms)
+Started GET "/noticia/3" for 127.0.0.1 at 2017-03-10 19:20:16 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mNoticium Load (2.3ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (2.4ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1 ORDER BY "comentarios"."created_at" DESC[0m  [["noticium_id", 3]]
+  Rendered noticia/show.html.erb within layouts/application (44.1ms)
+Completed 200 OK in 167ms (Views: 135.2ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 19:20:20 -0300
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.9ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  [1m[36mComentario Load (4.2ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1 ORDER BY "comentarios"."created_at" DESC[0m  [["noticium_id", 4]]
+  [1m[36mComentario Load (0.6ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1 ORDER BY "comentarios"."created_at" DESC[0m  [["noticium_id", 3]]
+  Rendered noticia/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 147ms (Views: 140.1ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 19:21:07 -0300
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (1.2ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  [1m[36mComentario Load (1.5ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1 ORDER BY "comentarios"."created_at" DESC[0m  [["noticium_id", 4]]
+  [1m[36mComentario Load (6.2ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1 ORDER BY "comentarios"."created_at" DESC[0m  [["noticium_id", 3]]
+  Rendered noticia/index.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 129ms (Views: 118.5ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/noticia/3" for 127.0.0.1 at 2017-03-10 19:21:11 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mNoticium Load (0.3ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (2.9ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1 ORDER BY "comentarios"."created_at" DESC[0m  [["noticium_id", 3]]
+  Rendered noticia/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 132ms (Views: 127.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 19:21:14 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (0.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (1.6ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1 ORDER BY "comentarios"."created_at" DESC[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 137ms (Views: 133.2ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/noticia/4/comentarios" for 127.0.0.1 at 2017-03-10 19:21:19 -0300
+Processing by ComentariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F9Ba8hiurzN7rwTGuLx2JanEsubOSNgk/n34KntmpmB8FrIC4J/bJQZJG4hiS2QQaqpVgtE3p92UgaZvei7KRA==", "comentario"=>{"autor"=>"matias", "contenido"=>"Prueba comentario"}, "commit"=>"Create Comentario", "noticium_id"=>"4"}
+  [1m[36mNoticium Load (2.0ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoticium Load (1.2ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "comentarios" ("autor", "contenido", "noticium_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["autor", "matias"], ["contenido", "Prueba comentario"], ["noticium_id", 4], ["created_at", 2017-03-10 22:21:19 UTC], ["updated_at", 2017-03-10 22:21:19 UTC]]
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/noticia/4
+Completed 302 Found in 61ms (ActiveRecord: 13.6ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 19:21:19 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (6.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (2.1ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1 ORDER BY "comentarios"."created_at" DESC[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 150ms (Views: 133.8ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 19:21:21 -0300
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (1.3ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  [1m[36mComentario Load (7.6ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1 ORDER BY "comentarios"."created_at" DESC[0m  [["noticium_id", 4]]
+  [1m[36mComentario Load (0.6ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1 ORDER BY "comentarios"."created_at" DESC[0m  [["noticium_id", 3]]
+  Rendered noticia/index.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 148ms (Views: 137.3ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/noticia/3" for 127.0.0.1 at 2017-03-10 19:22:14 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mNoticium Load (2.6ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (1.1ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1 ORDER BY "comentarios"."created_at" DESC[0m  [["noticium_id", 3]]
+  Rendered noticia/show.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 179ms (Views: 163.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 19:22:21 -0300
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.5ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  [1m[36mComentario Load (0.4ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1 ORDER BY "comentarios"."created_at" DESC[0m  [["noticium_id", 4]]
+  [1m[36mComentario Load (0.5ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1 ORDER BY "comentarios"."created_at" DESC[0m  [["noticium_id", 3]]
+  Rendered noticia/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 95ms (Views: 93.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/noticia/admin" for 127.0.0.1 at 2017-03-10 19:22:24 -0300
+Processing by NoticiaController#admin as HTML
+  Rendering noticia/admin.html.erb within layouts/application
+  [1m[36mNoticium Load (0.7ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC[0m
+  Rendered noticia/admin.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 167ms (Views: 164.0ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/noticia/3" for 127.0.0.1 at 2017-03-10 19:22:26 -0300
+Processing by NoticiaController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+8/tdWUEf5har2++z9X4bujU2ZOkLkzx2LGZLBDVokD5Wxly2uHDTg9ohIsSUtGisHa9oKVAFXqTF7uAF8/ogQ==", "id"=>"3"}
+  [1m[36mNoticium Load (5.4ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComentario Load (2.4ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1 ORDER BY "comentarios"."created_at" DESC[0m  [["noticium_id", 3]]
+  [1m[35mSQL (3.2ms)[0m  [1m[31mDELETE FROM "comentarios" WHERE "comentarios"."id" = $1[0m  [["id", 2]]
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "comentarios" WHERE "comentarios"."id" = $1[0m  [["id", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "noticia" WHERE "noticia"."id" = $1[0m  [["id", 3]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/noticia/admin
+Completed 302 Found in 29ms (ActiveRecord: 16.8ms)
+
+
+Started GET "/noticia/admin" for 127.0.0.1 at 2017-03-10 19:22:26 -0300
+Processing by NoticiaController#admin as HTML
+  Rendering noticia/admin.html.erb within layouts/application
+  [1m[36mNoticium Load (1.2ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC[0m
+  Rendered noticia/admin.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 111ms (Views: 106.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 19:22:27 -0300
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.6ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  [1m[36mComentario Load (13.1ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1 ORDER BY "comentarios"."created_at" DESC[0m  [["noticium_id", 4]]
+  Rendered noticia/index.html.erb within layouts/application (52.9ms)
+Completed 200 OK in 222ms (Views: 206.2ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 19:22:34 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (0.5ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (0.6ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1 ORDER BY "comentarios"."created_at" DESC[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (36.7ms)
+Completed 200 OK in 175ms (Views: 171.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/noticia/4/comentarios" for 127.0.0.1 at 2017-03-10 19:22:35 -0300
+Processing by ComentariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B06zfuaZUZtfzYzrErCNRjhweBqwPKuHVzySZSP1KTJsiFuOHqgljSIrk6XIR59z+x6ffq9D1H49wMwgIr1FFg==", "comentario"=>{"autor"=>"", "contenido"=>""}, "commit"=>"Create Comentario", "noticium_id"=>"4"}
+  [1m[36mNoticium Load (1.3ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNoticium Load (1.0ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/noticia/4
+Completed 302 Found in 40ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/noticia/4" for 127.0.0.1 at 2017-03-10 19:22:36 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNoticium Load (0.7ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering noticia/show.html.erb within layouts/application
+  [1m[36mComentario Load (2.8ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1 ORDER BY "comentarios"."created_at" DESC[0m  [["noticium_id", 4]]
+  Rendered noticia/show.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 136ms (Views: 129.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/noticia/admin" for 127.0.0.1 at 2017-03-10 19:23:49 -0300
+Processing by NoticiaController#admin as HTML
+  Rendering noticia/admin.html.erb within layouts/application
+  [1m[36mNoticium Load (0.7ms)[0m  [1m[34mSELECT "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC[0m
+  Rendered noticia/admin.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 107ms (Views: 103.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 19:23:50 -0300
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.5ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  [1m[36mComentario Load (1.3ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1 ORDER BY "comentarios"."created_at" DESC[0m  [["noticium_id", 4]]
+  Rendered noticia/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 120ms (Views: 117.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-10 19:23:51 -0300
+Processing by NoticiaController#index as HTML
+  Rendering noticia/index.html.erb within layouts/application
+  [1m[36mNoticium Load (0.7ms)[0m  [1m[34mSELECT  "noticia".* FROM "noticia" ORDER BY "noticia"."created_at" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  [1m[36mComentario Load (8.1ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."noticium_id" = $1 ORDER BY "comentarios"."created_at" DESC[0m  [["noticium_id", 4]]
+  Rendered noticia/index.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 109ms (Views: 96.8ms | ActiveRecord: 8.7ms)
+
+
