@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-xs-12">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Titulo</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @noticias.each do |noticia| %>
+          <tr>
+            <td><%= noticia.id %></td>
+            <td><%= noticia.titulo %></td>
+            <td><%= link_to 'Editar', edit_noticium_path(noticia) %> - <%= link_to 'Eliminar', noticium_path(noticia), method: :delete, data: {confirm: 'Estás seguro de borrar esta noticia?'} %></td>
+          </div>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<div class="row" style="margin-top:20px">
+  <div class="col-xs-12">
+    <hr>
+    <%= link_to 'Nuevo', new_noticium_path, :class => 'btn btn-default btn-lg' %>
+  </div>
+</div>
