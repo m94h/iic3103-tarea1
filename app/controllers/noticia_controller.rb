@@ -3,13 +3,13 @@ class NoticiaController < ApplicationController
 def index
   @current_modulo = 'visualizador'
   # Order por fecha = id, limite 10
-  @noticias = Noticium.order(created_at: :desc).limit(10)
+  @noticias = Noticium.GetAllOrdered(10)
 end
 
 def admin
   @current_modulo = 'administrador'
   # Order por fecha = id
-  @noticias = Noticium.order(created_at: :desc)
+  @noticias = Noticium.GetAllOrdered
 end
 
 def show

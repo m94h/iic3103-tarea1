@@ -3,16 +3,16 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <th>ID</th>
           <th>Titulo</th>
+          <th>Fecha de publicación</th>
           <th>Acciones</th>
         </tr>
       </thead>
       <tbody>
         <% @noticias.each do |noticia| %>
           <tr>
-            <td><%= noticia.id %></td>
             <td><%= noticia.titulo %></td>
+            <td><%= noticia.created_at %></td>
             <td><%= link_to 'Editar', edit_noticium_path(noticia) %> - <%= link_to 'Eliminar', noticium_path(noticia), method: :delete, data: {confirm: 'Estás seguro de borrar esta noticia?'} %></td>
           </div>
         <% end %>

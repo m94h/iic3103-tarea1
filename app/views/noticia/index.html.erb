@@ -1,11 +1,12 @@
 <div class="row">
   <% @noticias.each do |noticia| %>
-    <div class="col-sm-4 col-xs-6">
+    <div class="col-md-4 col-sm-6 col-xs-12">
       <div class="noticia">
+        <p><small>Publicada el <%= noticia.created_at %></small></p>
         <h1><%= noticia.titulo %></h1>
         <p><%= noticia.bajada %></p>
         <hr>
-        <p><%= truncar noticia.cuerpo %></p>
+        <p><%= noticia.cuerpo %></p>
         <div class="clearfix">
           <p class="pull-left"><span class="label label-default"><%= noticia.comentarios.length %> <%= (noticia.comentarios.length == 1) ? 'comentario' : 'comentarios' %></span></p>
           <p class="pull-right"><%= link_to 'Ver', noticium_path(noticia), :class => 'btn btn-default btn-sm' %></p>
