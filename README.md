@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+IIC3103 – Taller de integración
+Tarea 1
 
-Things you may want to cover:
+Matías Hurtado
 
-* Ruby version
 
-* System dependencies
+Referencias
 
-* Configuration
+Tutorial Getting Started with Rails — Ruby on Rails Guides
+http://guides.rubyonrails.org/getting_started.html
 
-* Database creation
+Bootstrap for Rails
+https://github.com/twbs/bootstrap-sass
 
-* Database initialization
+Bootstrap basic template and examples
+http://getbootstrap.com/getting-started/#template
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Modelo UML disponible en archivo 'UML.pdf'
